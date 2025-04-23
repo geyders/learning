@@ -1,0 +1,475 @@
+body {
+    background-color: #1e1e1e;
+    font-family: 'Manrope', sans-serif;
+    color: #ffffff;
+}
+
+header {
+    width: 100%;
+    max-width: 1920px;
+}
+
+/* Navbar styles */
+.navbar {
+    max-height: 100px;
+    max-width: 1920px;
+    padding: 30px 162px;
+    grid-column: 1 / span 9;
+    grid-row: 1 / span 4;
+    z-index: 3;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: start;
+}
+
+.logo {
+    display: flex;
+    max-width: 500px;
+    max-height: 160px;
+}
+
+
+.btn-container {
+    display: flex;
+    background-color: transparent;
+    max-width: 560px;
+    max-height: 80px;
+}
+
+.icon-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-links {
+    max-width: 600px;
+    max-height: 80px;
+    background-color: #0f0f0f;
+    display: flex;
+    border-radius: 12px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    border: 4px solid #1a1a1a;
+}
+
+.nav-link {
+    color: #bfbfbf;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 10px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.nav-link.active {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border-radius: 12px;
+}
+
+.nav-link:active {
+    transform: translateY(2px);
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border-radius: 12px;
+}
+
+/* Toggle button */
+
+.primary-btn:active,
+.secondary-btn:active,
+.footer-link:active,
+.choose-btn:active,
+.icon-btn:active {
+    transform: translateY(2px);
+}
+
+/* image-block */
+
+.image-block {
+    width: 429px;
+    max-height: 380px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    opacity: 0.5;
+    background-color: #0f0f0f;
+    border-radius: 12px;
+    border: 6px solid #262626;
+}
+
+.gallery-grid {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 4px;
+    margin: -40px;
+}
+
+
+.gallery-img {
+    width: 97px;
+    height: 121px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 6px;
+}
+
+/* text-block */
+.text-block {
+    display: flex;
+    flex-direction: column;
+    width: 400px
+}
+
+/* Основний контейнер форми */
+.form-block {
+    display: flex;
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    gap: 50px;
+    padding: 40px 162px; /* Такі ж відступи як у navbar */
+    box-sizing: border-box;
+}
+
+/* Лівий блок (текст + галерея) */
+.left-block {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    min-width: 0; /* Фікс для переповнення */
+}
+
+/* Правий блок (форма) */
+.right-block {
+    flex: 1;
+    min-width: 0; /* Фікс для переповнення */
+}
+
+/* Контейнер форми */
+form {
+    background-color: #0f0f0f;
+    border: 1px solid #262626;
+    border-radius: 12px;
+    padding: 32px;
+    width: 100%;
+    max-width: 800px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Рядки форми */
+.row {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+}
+
+/* Колонки (для полів вводу) */
+.col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0; /* Фікс для переповнення */
+}
+
+/* Повноширинні елементи (textarea) */
+.full-width {
+    width: 100%;
+}
+
+/* Стилі для міток */
+label {
+    font-size: 14px;
+    color: #bfbfbf;
+    font-weight: 500;
+}
+
+/* Загальні стилі для полів вводу */
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background-color: #0f0f0f;
+    color: white;
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+/* Стилі для фокусу */
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #E50000;
+    box-shadow: 0 0 0 2px rgba(229, 0, 0, 0.2);
+}
+
+/* Специфічні стилі для textarea */
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Стилі для телефонного вводу */
+.phone-input {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+}
+
+/* Чекбокс */
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: transparent;
+}
+
+.checkbox-wrapper input {
+    width: auto;   
+    accent-color: #E50000;
+}
+
+/* Кнопка відправки */
+.send-btn {
+    padding: 12px 24px;
+    background-color: #E50000;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.send-btn:hover {
+    background-color: #444;
+}
+
+/* Контейнер для кнопки та чекбоксу */
+.submit-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+}
+
+/* faq section  */
+.section-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 200px;
+    margin: 40px 0;
+    padding: 0 70px;
+
+}
+
+.section-header h1 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.section-header p {
+    color: #999999;
+    font-size: 16px;
+    margin: 0;
+}
+
+.text-block {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.primary-btn {
+    background-color: #e50000;
+    width: 200px;
+    height: 64px;
+    border-radius: 8px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.4s ease, box-shadow 0.4s ease;
+    gap: 12px;
+    margin-top: 15px;
+    color: white;
+    font-size: 16px;
+}
+
+
+.primary-btn:hover {
+    background: #dc0202;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, auto);
+    gap: 15px;
+    padding: 0 75px;
+    margin-top: 40px;
+}
+
+.faq-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    border-radius: 12px;
+    gap: 10px;
+}
+
+.faq-active {
+    display: flex;
+    flex-direction: column;
+}
+
+.faq-number {
+    background-color: #1f1f1f;
+    border: 1px solid #262626;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.faq-question {
+    font-size: 17px;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.faq-answer {
+    font-size: 13px;
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+.faq-icon {
+    max-height: 20px;
+    max-width: 20px;
+}
+
+/* footer */
+.footer {
+    background-color: #0F0F0F;
+    padding: 10px;
+    max-width: 100%;
+
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
+    max-width: 1920px;
+    width: 100%;
+}
+
+.footer-column {
+    background-color: #1a1a1a00;
+    border-radius: 12px;
+    padding: 12px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;      
+    justify-content: flex-start;
+    gap: 10px;
+    font-size: 13px;
+}
+
+.footer-title {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.footer-link {
+    padding: 10px 16px;
+    background-color: #1a1a1a00;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-align: left;
+    font-size: 14px;
+}
+
+.footer-link:hover {
+    background-color: #555;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.social-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.social-btn img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    color: #999;
+    font-size: 14px;
+}
+
+.legal-links {
+    display: flex;
+    gap: 15px;
+}
+
+.legal-links button {
+    background: none;
+    border: none;
+    color: #999;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.legal-links button:hover {
+    color: white;
+}
