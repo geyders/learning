@@ -66,44 +66,49 @@
             </div>
             <div class="right-block">
                 <form action="/submit-form" method="POST">
-                    <div class="row">
-                        <div class="col">
-                            <label for="first-name">First Name:</label>
-                            <input type="text" id="first-name" name="first-name" placeholder="Enter First Name"
-                                required>
-                        </div>
-                        <div class="col">
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" placeholder="Enter your Email" required>
-                        </div>
-                    </div>
+                    <div class="form-wrap">
 
-                    <div class="row">
-                        <div class="col">
-                            <label for="last-name">Last Name:</label>
-                            <input type="text" id="last-name" name="last-name" placeholder="Enter Last Name" required>
-                        </div>
-                        <div class="col">
-                            <label for="phone">Phone Number:</label>
-                            <div class="phone-input">
 
-                                <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+                        <div class="row">
+                            <div class="col">
+                                <label for="first-name">First Name:</label>
+                                <input type="text" id="first-name" name="first-name" placeholder="Enter First Name"
+                                    required>
+                            </div>
+                            <div class="col">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" placeholder="Enter your Email" required>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="row full-width">
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="message" rows="4" placeholder="Enter your Message"
-                            required></textarea>
-                    </div>
+                        <div class="row">
+                            <div class="col">
+                                <label for="last-name">Last Name:</label>
+                                <input type="text" id="last-name" name="last-name" placeholder="Enter Last Name"
+                                    required>
+                            </div>
+                            <div class="col">
+                                <label for="phone">Phone Number:</label>
+                                <div class="phone-input">
 
-                    <div class="row submit-btn">
-                        <div class="checkbox-wrapper">
-                            <input type="checkbox" id="agree" name="agree" required>
-                            <label for="agree">I agree with Terms of Use and Privacy Policy</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+                                </div>
+                            </div>
                         </div>
-                        <button type="submit" class="send-btn">Send</button>
+
+                        <div class="row full-width">
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Enter your Message"
+                                required></textarea>
+                        </div>
+
+                        <div class="row submit-btn">
+                            <div class="checkbox-wrapper">
+                                <input type="checkbox" id="agree" name="agree" required>
+                                <label for="agree">I agree with Terms of Use and Privacy Policy</label>
+                            </div>
+                            <button type="submit" class="send-btn">Send</button>
+                        </div>
                     </div>
                 </form>
             </div>

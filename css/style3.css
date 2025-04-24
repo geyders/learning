@@ -135,79 +135,76 @@ header {
     width: 400px
 }
 
-/* Основний контейнер форми */
+
 .form-block {
     display: flex;
+    flex-direction: row;
     width: 100%;
     max-width: 1920px;
     margin: 0 auto;
     gap: 50px;
     padding: 40px 162px;
-    /* Такі ж відступи як у navbar */
+min-height: 600px;
     box-sizing: border-box;
 }
 
-/* Лівий блок (текст + галерея) */
 .left-block {
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 30px;
     min-width: 0;
-    /* Фікс для переповнення */
 }
 
-/* Правий блок (форма) */
 .right-block {
     flex: 1;
-    min-width: 0;
-    /* Фікс для переповнення */
+    max-width: 100%;
+    min-height: 592px;
+
 }
 
-/* Контейнер форми */
+/* form */
 form {
     background-color: #0f0f0f;
     border: 1px solid #262626;
     border-radius: 12px;
-    padding: 32px;
-    width: 100%;
-    max-width: 800px;
-    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     gap: 24px;
+    height: 100%;
+    width: 100%;
+   
 }
 
-/* Рядки форми */
+.form-wrap{
+    padding: 10px;
+    justify-content: flex-start;
+}
+
 .row {
     display: flex;
     gap: 16px;
     width: 100%;
 }
 
-/* Колонки (для полів вводу) */
 .col {
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 8px;
     min-width: 0;
-    /* Фікс для переповнення */
 }
 
-/* Повноширинні елементи (textarea) */
 .full-width {
     width: 100%;
 }
 
-/* Стилі для міток */
 label {
     font-size: 14px;
     color: #bfbfbf;
     font-weight: 500;
 }
 
-/* Загальні стилі для полів вводу */
 input,
 textarea,
 select {
@@ -223,7 +220,6 @@ select {
     box-sizing: border-box;
 }
 
-/* Стилі для фокусу */
 input:focus,
 textarea:focus,
 select:focus {
@@ -232,20 +228,17 @@ select:focus {
     box-shadow: 0 0 0 2px rgba(229, 0, 0, 0.2);
 }
 
-/* Специфічні стилі для textarea */
 textarea {
     resize: vertical;
     min-height: 120px;
 }
 
-/* Стилі для телефонного вводу */
 .phone-input {
     display: flex;
     gap: 8px;
     width: 100%;
 }
 
-/* Чекбокс */
 .checkbox-wrapper {
     display: flex;
     align-items: center;
@@ -258,7 +251,6 @@ textarea {
     accent-color: #E50000;
 }
 
-/* Кнопка відправки */
 .send-btn {
     padding: 12px 24px;
     background-color: #E50000;
@@ -273,7 +265,6 @@ textarea {
     background-color: #444;
 }
 
-/* Контейнер для кнопки та чекбоксу */
 .submit-btn {
     display: flex;
     justify-content: space-between;
