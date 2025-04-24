@@ -12,14 +12,11 @@ header {
 /* Navbar styles */
 .navbar {
     max-height: 100px;
-    max-width: 1920px;
-    padding: 30px 162px;
-    grid-column: 1 / span 9;
-    grid-row: 1 / span 4;
-    z-index: 3;
+    margin: 20px 20px 20px 20px;
     display: grid;
     grid-auto-flow: column;
-    align-items: start;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
@@ -34,6 +31,10 @@ header {
     background-color: transparent;
     max-width: 560px;
     max-height: 80px;
+}
+
+.btn-container1 {
+    gap: 16px;
 }
 
 .icon-btn {
@@ -80,14 +81,17 @@ header {
     border-radius: 12px;
 }
 
-/* Toggle button */
-
-.primary-btn:active,
-.secondary-btn:active,
-.footer-link:active,
-.choose-btn:active,
-.icon-btn:active {
+/* Active styles */
+.movies:active,
+.support:active,
+.subs:active,
+.mini-btn:active,
+.btn-arrow:active,
+.button-block:active {
     transform: translateY(2px);
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border-radius: 8px;
 }
 
 /* image-block */
@@ -138,7 +142,8 @@ header {
     max-width: 1920px;
     margin: 0 auto;
     gap: 50px;
-    padding: 40px 162px; /* Такі ж відступи як у navbar */
+    padding: 40px 162px;
+    /* Такі ж відступи як у navbar */
     box-sizing: border-box;
 }
 
@@ -148,13 +153,15 @@ header {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    min-width: 0; /* Фікс для переповнення */
+    min-width: 0;
+    /* Фікс для переповнення */
 }
 
 /* Правий блок (форма) */
 .right-block {
     flex: 1;
-    min-width: 0; /* Фікс для переповнення */
+    min-width: 0;
+    /* Фікс для переповнення */
 }
 
 /* Контейнер форми */
@@ -184,7 +191,8 @@ form {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    min-width: 0; /* Фікс для переповнення */
+    min-width: 0;
+    /* Фікс для переповнення */
 }
 
 /* Повноширинні елементи (textarea) */
@@ -246,7 +254,7 @@ textarea {
 }
 
 .checkbox-wrapper input {
-    width: auto;   
+    width: auto;
     accent-color: #E50000;
 }
 
@@ -401,7 +409,7 @@ textarea {
     padding: 12px 12px;
     display: flex;
     flex-direction: column;
-    align-items: center;      
+    align-items: center;
     justify-content: flex-start;
     gap: 10px;
     font-size: 13px;

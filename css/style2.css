@@ -2,6 +2,7 @@ body {
     background-color: #1e1e1e;
     font-family: 'Manrope', sans-serif;
     color: #ffffff;
+
 }
 
 header {
@@ -12,14 +13,11 @@ header {
 /* Navbar styles */
 .navbar {
     max-height: 100px;
-    max-width: 1920px;
-    padding: 30px 162px;
-    grid-column: 1 / span 9;
-    grid-row: 1 / span 4;
-    z-index: 3;
+    margin: 20px 20px 20px 20px;
     display: grid;
     grid-auto-flow: column;
-    align-items: start;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
@@ -34,6 +32,10 @@ header {
     background-color: transparent;
     max-width: 560px;
     max-height: 80px;
+}
+
+.btn-container1 {
+    gap: 16px;
 }
 
 .icon-btn {
@@ -80,25 +82,6 @@ header {
     border-radius: 12px;
 }
 
-/* Movies, Support, Subs */
-.home,
-.support,
-.subs {
-    background-color: #0f0f0f;
-    color: #bfbfbf;
-    border: none;
-    font-size: 18px;
-    font-family: Manrope;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-    text-decoration: none;
-    padding: 10px;
-    height: 55px;
-    display: flex;
-    align-items: center;
-}
-
 /* Active styles */
 .movies:active,
 .support:active,
@@ -116,21 +99,40 @@ header {
 /* top block */
 .top-section {
     display: grid;
-    align-items: center;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
     justify-content: center;
-    flex-direction: column;
-    max-height: 600px;
+    justify-items: center;
+    max-height: 850px;
     overflow: hidden;
     width: 100%;
     max-width: 1920px;
+    position: relative;
 }
-
-.big-image {
+.top-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    grid-area: 1 / 1;
+    z-index: 1;
     width: 100%;
     height: 100%;
+    padding: 160px 0; /* щоб був простір зверху і знизу */
+    box-sizing: border-box;
+}
+
+
+.big-image {
+    width: 98%;
+    height: 80%;
     object-fit: cover;
     grid-area: 1 / 1;
-    filter: brightness(30%);
+    filter: brightness(70%);
+    border: 1px solid #999999;
+    border-radius: 12px;
+    z-index: 0;
+    mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 15%, rgba(0, 0, 0, 0.708) 65%, transparent 100%);
 }
 
 .top-block {
@@ -139,10 +141,8 @@ header {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 20px;
     color: white;
-    grid-area: 1 / 1;
-    z-index: 1;
+    margin-bottom: 20px; /* відстань до нижнього блока */
 }
 
 .text-container {
@@ -168,7 +168,7 @@ header {
 .button {
     background-color: #e50000;
     width: 200px;
-    height: 54px;
+    height: 64px;
     border-radius: 8px;
     border: none;
     display: flex;
@@ -176,17 +176,19 @@ header {
     justify-content: center;
     cursor: pointer;
     gap: 12px;
-    margin-top: 15px;
+    text-decoration: none;
 }
 
 .button:active {
     transform: translateY(2px);
+    text-decoration: none;
 }
 
 .btn-text {
     font-size: 16px;
     font-family: Manrope, sans-serif;
     color: #ffffff;
+
 }
 
 
@@ -194,10 +196,9 @@ header {
 .mini-btn {
     width: 64px;
     height: 64px;
-    padding: 10px 16px;
-    background-color: #1a1a1a;
+    background-color: #0f0f0f;
     color: white;
-    border: none;
+    border: 1px solid #262626;
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.2s ease;
@@ -208,29 +209,28 @@ header {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    margin-top: 20px;
 }
 
 .bottom-block {
     background-color: #0f0f0f00;
-    height: 50px;
-    width: 100%;
+    height:100%;
+    width: 170%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 20px;
     border-radius: 12px;
     padding: 10px;
-    margin-top: auto;
+    flex-direction: row;
 }
 
 .btn-arrow {
     border: none;
     background-color: #0f0f0f;
-    width: 40px;
-    height: 40px;
+    width: 56px;
+    height: 56px;
     border-radius: 4px;
     border: 1px solid #1f1f1f;
+
 }
 
 
