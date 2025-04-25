@@ -259,8 +259,100 @@ header {
     background: #dc0202;
 }
 
+/* free trial period */
+.section-free {
+    display: grid;
+    place-items: center;
+    position: relative;
+}
 
+.text-wrap {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    width: 100%;
+    max-width: 1020px;
+    padding: 20px;
+    gap: 40px;
+}
 
+.image-block {
+    grid-column: 1 / span 9;
+    grid-row: 1 / span 4;
+    z-index: 1;
+    opacity: 0.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    max-width: 1920px;
+    position: relative;
+    mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+}
+
+.free-block {
+    position: relative;
+    height: auto;
+    width: 100%;
+    max-width: 1200px;
+    object-fit: cover;
+    grid-area: 1 / 1;
+}
+
+.free-block::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    inset: 0;
+    background: linear-gradient(to left, rgba(229, 0, 0, 0.5) 10%, rgb(30, 30, 30) 100%, rgb(5, 3, 3) 80%, transparent 100%);
+    z-index: 1;
+}
+
+.gallery-row {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.free-img {
+    height: 73px;
+    width: 124px;
+    object-fit: cover;
+}
+
+/* section header*/
+.section-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 200px;
+    margin: 40px 0;
+    padding: 0 70px;
+
+}
+
+.text-wrap h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.text-block p {
+    color: #999999;
+    font-size: 16px;
+    margin: 0;
+    align-items: flex-start;
+}
+
+.text-block {
+    align-items: start;
+}
 
 /*footer */
 .footer {
@@ -360,10 +452,11 @@ header {
 /* table */
 .table-wrap {
     max-width: 1920px;
+    width: 95%;
     border-radius: 12px;
     overflow: hidden;
     border: 1px solid #262626;
-    margin-bottom: 32px;
+    margin: 40px;
 }
 
 .table-sub {

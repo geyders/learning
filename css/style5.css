@@ -88,7 +88,8 @@ header {
 .subs:active,
 .mini-btn:active,
 .btn-arrow:active,
-.button-block:active {
+.button-block:active,
+.primary-btn:active {
     transform: translateY(2px);
     background-color: #1a1a1a;
     color: #ffffff;
@@ -520,6 +521,134 @@ header {
     flex-direction: column;
     align-items: start;
 }
+
+.primary-btn {
+    background-color: #e50000;
+    width: 200px;
+    height: 64px;
+    border-radius: 8px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.4s ease, box-shadow 0.4s ease;
+    gap: 12px;
+    margin-top: 15px;
+    color: white;
+    font-size: 16px;
+}
+
+
+.primary-btn:hover {
+    background: #dc0202;
+}
+
+/* free trial period */
+.section-free {
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+.text-wrap {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    width: 100%;
+    max-width: 1020px;
+    padding: 20px;
+    gap: 40px;
+}
+
+.image-block {
+    grid-column: 1 / span 9;
+    grid-row: 1 / span 4;
+    z-index: 1;
+    opacity: 0.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    max-width: 1920px;
+    position: relative;
+    mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+}
+
+.free-block {
+    position: relative;
+    height: auto;
+    width: 100%;
+    max-width: 1200px;
+    object-fit: cover;
+    grid-area: 1 / 1;
+}
+
+.free-block::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    inset: 0;
+    background: linear-gradient(to left, rgba(229, 0, 0, 0.5) 10%, rgb(30, 30, 30) 100%, rgb(5, 3, 3) 80%, transparent 100%);
+    z-index: 1;
+}
+
+.gallery-row {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.free-img {
+    height: 73px;
+    width: 124px;
+    object-fit: cover;
+}
+
+.primary-btn {
+    background-color: #e50000;
+    width: 200px;
+    height: 64px;
+    border-radius: 8px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.4s ease, box-shadow 0.4s ease;
+    gap: 12px;
+    margin-top: 15px;
+    color: white;
+    font-size: 16px;
+}
+
+
+.primary-btn:hover {
+    background: #dc0202;
+}
+
+
+/* section header*/
+
+.text-wrap h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.text-block p {
+    color: #999999;
+    font-size: 16px;
+    margin: 0;
+    align-items: flex-start;
+}
+
 
 /*footer */
 .footer {
