@@ -12,8 +12,8 @@ header {
 
 /* Navbar styles */
 .navbar {
+    padding: 24px 80px 24px 80px;
     max-height: 100px;
-    margin: 20px 20px 20px 20px;
     display: grid;
     grid-auto-flow: column;
     justify-content: space-between;

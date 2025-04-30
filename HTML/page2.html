@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movies & Shows</title>
     <link rel="icon" href="/img/Vector.svg" type="image/png">
-    <link rel="stylesheet" href="/css/style2.css">
+    <link rel="stylesheet" href="../CSS/style2.css">
     <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
 </head>
 
@@ -22,20 +22,23 @@
             </div>
 
             <div class='nav-links'>
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="page2.html" class="nav-link active">Movies & Shows</a>
-                <a href="page3.html" class="nav-link">Support</a>
-                <a href="page4.html" class="nav-link">Subscriptions</a>
+                <a href="/HTML/index.html" class="nav-link">Home</a>
+                <a href="/HTML/page2.html" class="nav-link active">Movies & Shows</a>
+                <a href="/HTML/page3.html" class="nav-link">Support</a>
+                <a href="/HTML/page4.html" class="nav-link">Subscriptions</a>
             </div>
             <div class='btn-container1'>
                 <button class="icon-btn"><img src='/img/search.svg'></button>
                 <button class="icon-btn"><img src='/img/bell.svg'></button>
             </div>
+            <div class="lines">
+                <img src="/img/lines.png" alt="lines">
+            </div>
         </div>
 
         <!-- top section  -->
         <div class="top-section">
-            <img src="/img/avengers.jpg" alt="avengers" class="big-image">
+            <img src="/img/avenger2.png" alt="avengers" class="big-image">
 
             <div class="top-wrap">
 
@@ -56,22 +59,25 @@
                     </div>
 
                     <div class="btn-block">
-                        <button id="button" class="button">
-                            <img id="play" class="play" src="/img/btn.png" alt="play">
-                            <span id="btn-text" class="btn-text">Play Now</span>
-                        </button>
+                        <div>
+                            <button id="button" class="button">
+                                <img id="play" class="play" src="/img/btn.png" alt="play">
+                                <span id="btn-text" class="btn-text">Play Now</span>
+                            </button>
+                        </div>
+                        <div>
+                            <button class="mini-btn">
+                                <img src="/img/plus.png" alt="plus">
+                            </button>
 
-                        <button class="mini-btn">
-                            <img src="/img/plus.png" alt="plus">
-                        </button>
+                            <button class="mini-btn">
+                                <img src="/img/like.png" alt="like">
+                            </button>
 
-                        <button class="mini-btn">
-                            <img src="/img/like.png" alt="like">
-                        </button>
-
-                        <button class="mini-btn">
-                            <img src="/img/volume.png" alt="volume">
-                        </button>
+                            <button class="mini-btn">
+                                <img src="/img/volume.png" alt="volume">
+                            </button>
+                        </div>
                     </div>
 
                     <div class="bottom-block">
@@ -95,7 +101,7 @@
     <main>
         <div class="movie-block">
             <div class="movie-btn">
-                <a href="page5.html" class="button">
+                <a href="/HTML/page5.html" class="button">
                     <span class="btn-text">Movie</span>
                 </a>
             </div>
@@ -112,94 +118,101 @@
 
 
             <!-- кнопки с фотками -->
-            <div class='category-grid'>
-                <!-- Category 1 -->
-                <div class='category-card'>
-                    <div class='card-images'>
-                        <div class='image-row'>
-                            <img src="/img/img-container/Image37.png" alt="Action movie">
-                            <img src="/img/img-container/Image19.png" alt="Action movie">
+            <div class="category-wrapper">
+                <div class='category-grid'>
+                    <!-- Category 1 -->
+                    <div class='category-card'>
+                        <div class='card-images'>
+                            <div class='image-row'>
+                                <img src="/img/img-container/Image37.png" alt="Action movie">
+                                <img src="/img/img-container/Image19.png" alt="Action movie">
+                            </div>
+                            <div class='image-row'>
+                                <img src="/img/img-container/Image21.png" alt="Action movie">
+                                <img src="/img/img-container/Image38.png" alt="Action movie">
+                            </div>
                         </div>
-                        <div class='image-row'>
-                            <img src="/img/img-container/Image21.png" alt="Action movie">
-                            <img src="/img/img-container/Image38.png" alt="Action movie">
+                        <div class='card-footer'>
+                            <h3>Action</h3>
+                            <img src="/img/rightArrow.png" alt="arrow">
                         </div>
                     </div>
-                    <div class='card-footer'>
-                        <h3>Action</h3>
-                        <img src="/img/rightArrow.png" alt="arrow">
+
+                    <!-- Category 2 -->
+                    <div class='category-card'>
+                        <div class='card-images'>
+                            <div class='image-row'>
+                                <img src="/img/img-container/Image39.png" alt="Adventure movie">
+                                <img src="/img/img-container/Image40.png" alt="Adventure movie">
+                            </div>
+                            <div class='image-row'>
+                                <img src="/img/img-container/Image41.png" alt="Adventure movie">
+                                <img src="/img/img-container/Image42.png" alt="Adventure movie">
+                            </div>
+                        </div>
+                        <div class='card-footer'>
+                            <h3>Adventure</h3>
+                            <img src="/img/rightArrow.png" alt="arrow">
+                        </div>
+                    </div>
+
+                    <!-- Category 3 -->
+                    <div class='category-card'>
+                        <div class='card-images'>
+                            <div class='image-row'>
+                                <img src="/img/img-container/Image43.png" alt="Comedy movie">
+                                <img src="/img/img-container/Image44.png" alt="Comedy movie">
+                            </div>
+                            <div class='image-row'>
+                                <img src="/img/img-container/Image45.png" alt="Comedy movie">
+                                <img src="/img/img-container/Image46.png" alt="Comedy movie">
+                            </div>
+                        </div>
+                        <div class='card-footer'>
+                            <h3>Comedy</h3>
+                            <img src="/img/rightArrow.png" alt="arrow">
+                        </div>
+                    </div>
+
+                    <!-- Category 4 -->
+                    <div class='category-card'>
+                        <div class='card-images'>
+                            <div class='image-row'>
+                                <img src="/img/img-container/Image47.png" alt="Drama movie">
+                                <img src="/img/img-container/Image48.png" alt="Drama movie">
+                            </div>
+                            <div class='image-row'>
+                                <img src="/img/img-container/Image49.png" alt="Drama movie">
+                                <img src="/img/img-container/Image50.png" alt="Drama movie">
+                            </div>
+                        </div>
+                        <div class='card-footer'>
+                            <h3>Drama</h3>
+                            <img src="/img/rightArrow.png" alt="arrow">
+                        </div>
+                    </div>
+
+                    <!-- Category 5 -->
+                    <div class='category-card'>
+                        <div class='card-images'>
+                            <div class='image-row'>
+                                <img src="/img/img-container/Image51.png" alt="Drama movie">
+                                <img src="/img/img-container/Image52.png" alt="Drama movie">
+                            </div>
+                            <div class='image-row'>
+                                <img src="/img/img-container/Image53.png" alt="Drama movie">
+                                <img src="/img/img-container/Image54.png" alt="Drama movie">
+                            </div>
+                        </div>
+                        <div class='card-footer'>
+                            <h3>Drama</h3>
+                            <img src="/img/rightArrow.png" alt="arrow">
+                        </div>
                     </div>
                 </div>
-
-                <!-- Category 2 -->
-                <div class='category-card'>
-                    <div class='card-images'>
-                        <div class='image-row'>
-                            <img src="/img/img-container/Image39.png" alt="Adventure movie">
-                            <img src="/img/img-container/Image40.png" alt="Adventure movie">
-                        </div>
-                        <div class='image-row'>
-                            <img src="/img/img-container/Image41.png" alt="Adventure movie">
-                            <img src="/img/img-container/Image42.png" alt="Adventure movie">
-                        </div>
-                    </div>
-                    <div class='card-footer'>
-                        <h3>Adventure</h3>
-                        <img src="/img/rightArrow.png" alt="arrow">
-                    </div>
-                </div>
-
-                <!-- Category 3 -->
-                <div class='category-card'>
-                    <div class='card-images'>
-                        <div class='image-row'>
-                            <img src="/img/img-container/Image43.png" alt="Comedy movie">
-                            <img src="/img/img-container/Image44.png" alt="Comedy movie">
-                        </div>
-                        <div class='image-row'>
-                            <img src="/img/img-container/Image45.png" alt="Comedy movie">
-                            <img src="/img/img-container/Image46.png" alt="Comedy movie">
-                        </div>
-                    </div>
-                    <div class='card-footer'>
-                        <h3>Comedy</h3>
-                        <img src="/img/rightArrow.png" alt="arrow">
-                    </div>
-                </div>
-
-                <!-- Category 4 -->
-                <div class='category-card'>
-                    <div class='card-images'>
-                        <div class='image-row'>
-                            <img src="/img/img-container/Image47.png" alt="Drama movie">
-                            <img src="/img/img-container/Image48.png" alt="Drama movie">
-                        </div>
-                        <div class='image-row'>
-                            <img src="/img/img-container/Image49.png" alt="Drama movie">
-                            <img src="/img/img-container/Image50.png" alt="Drama movie">
-                        </div>
-                    </div>
-                    <div class='card-footer'>
-                        <h3>Drama</h3>
-                        <img src="/img/rightArrow.png" alt="arrow">
-                    </div>
-                </div>
-
-                <!-- Category 5 -->
-                <div class='category-card'>
-                    <div class='card-images'>
-                        <div class='image-row'>
-                            <img src="/img/img-container/Image51.png" alt="Drama movie">
-                            <img src="/img/img-container/Image52.png" alt="Drama movie">
-                        </div>
-                        <div class='image-row'>
-                            <img src="/img/img-container/Image53.png" alt="Drama movie">
-                            <img src="/img/img-container/Image54.png" alt="Drama movie">
-                        </div>
-                    </div>
-                    <div class='card-footer'>
-                        <h3>Drama</h3>
-                        <img src="/img/rightArrow.png" alt="arrow">
+                <div class="indicator-wrap">
+                    <div class="indicator">
+                        <img src="/img/indicator.png" alt="indicator">
                     </div>
                 </div>
             </div>
@@ -220,88 +233,95 @@
             </div>
             <!-- топ 10 блок фото кнопка -->
             <!-- кнопки с фотками -->
-            <div class='category-grid'>
-                <!-- Category 1 -->
-                <div class='category-card section-four'>
-                    <div class='card-images images-four'>
-                        <div class='image-row img-four'>
-                            <img src="/img/img-container/Image37.png" alt="Action movie">
-                            <img src="/img/img-container/Image19.png" alt="Action movie">
+            <div class="category-wrapper">
+                <div class='category-grid'>
+                    <!-- Category 1 -->
+                    <div class='category-card section-four'>
+                        <div class='card-images images-four'>
+                            <div class='image-row img-four'>
+                                <img src="/img/img-container/Image37.png" alt="Action movie">
+                                <img src="/img/img-container/Image19.png" alt="Action movie">
+                            </div>
+                            <div class='image-row img-four'>
+                                <img src="/img/img-container/Image21.png" alt="Action movie">
+                                <img src="/img/img-container/Image38.png" alt="Action movie">
+                            </div>
                         </div>
-                        <div class='image-row img-four'>
-                            <img src="/img/img-container/Image21.png" alt="Action movie">
-                            <img src="/img/img-container/Image38.png" alt="Action movie">
+                        <div class='card-footer'>
+                            <div class="title-column">
+                                <button class="btn-top">Top 10 In</button>
+                                <h3>Action</h3>
+                            </div>
+                            <img src="/img/rightArrow.png" alt="arrow">
                         </div>
                     </div>
-                    <div class='card-footer'>
-                        <div class="title-column">
-                            <button class="btn-top">Top 10 In</button>
-                            <h3>Action</h3>
+
+                    <!-- Category 2 -->
+                    <div class='category-card section-four'>
+                        <div class='card-images images-four'>
+                            <div class='image-row img-four'>
+                                <img src="/img/img-container/Image39.png" alt="Adventure movie">
+                                <img src="/img/img-container/Image40.png" alt="Adventure movie">
+                            </div>
+                            <div class='image-row img-four'>
+                                <img src="/img/img-container/Image41.png" alt="Adventure movie">
+                                <img src="/img/img-container/Image42.png" alt="Adventure movie">
+                            </div>
                         </div>
-                        <img src="/img/rightArrow.png" alt="arrow">
+                        <div class='card-footer'>
+                            <div class="title-column">
+                                <button class="btn-top">Top 10 In</button>
+                                <h3>Adventure</h3>
+                            </div>
+                            <img src="/img/rightArrow.png" alt="arrow">
+                        </div>
+                    </div>
+
+                    <!-- Category 3 -->
+                    <div class='category-card section-four'>
+                        <div class='card-images images-four'>
+                            <div class='image-row img-four'>
+                                <img src="/img/img-container/Image43.png" alt="Comedy movie">
+                                <img src="/img/img-container/Image44.png" alt="Comedy movie">
+                            </div>
+                            <div class='image-row img-four'>
+                                <img src="/img/img-container/Image45.png" alt="Comedy movie">
+                                <img src="/img/img-container/Image46.png" alt="Comedy movie">
+                            </div>
+                        </div>
+                        <div class='card-footer'>
+                            <div class="title-column">
+                                <button class="btn-top">Top 10 In</button>
+                                <h3>Comedy</h3>
+                            </div>
+                            <img src="/img/rightArrow.png" alt="arrow">
+                        </div>
+                    </div>
+
+                    <!-- Category 4 -->
+                    <div class='category-card section-four'>
+                        <div class='card-images images-four'>
+                            <div class='image-row img-four'>
+                                <img src="/img/img-container/Image47.png" alt="Drama movie">
+                                <img src="/img/img-container/Image48.png" alt="Drama movie">
+                            </div>
+                            <div class='image-row img-four'>
+                                <img src="/img/img-container/Image49.png" alt="Drama movie">
+                                <img src="/img/img-container/Image50.png" alt="Drama movie">
+                            </div>
+                        </div>
+                        <div class='card-footer'>
+                            <div class="title-column">
+                                <button class="btn-top">Top 10 In</button>
+                                <h3>Drama</h3>
+                            </div>
+                            <img src="/img/rightArrow.png" alt="arrow">
+                        </div>
                     </div>
                 </div>
-
-                <!-- Category 2 -->
-                <div class='category-card section-four'>
-                    <div class='card-images images-four'>
-                        <div class='image-row img-four'>
-                            <img src="/img/img-container/Image39.png" alt="Adventure movie">
-                            <img src="/img/img-container/Image40.png" alt="Adventure movie">
-                        </div>
-                        <div class='image-row img-four'>
-                            <img src="/img/img-container/Image41.png" alt="Adventure movie">
-                            <img src="/img/img-container/Image42.png" alt="Adventure movie">
-                        </div>
-                    </div>
-                    <div class='card-footer'>
-                        <div class="title-column">
-                            <button class="btn-top">Top 10 In</button>
-                            <h3>Adventure</h3>
-                        </div>
-                        <img src="/img/rightArrow.png" alt="arrow">
-                    </div>
-                </div>
-
-                <!-- Category 3 -->
-                <div class='category-card section-four'>
-                    <div class='card-images images-four'>
-                        <div class='image-row img-four'>
-                            <img src="/img/img-container/Image43.png" alt="Comedy movie">
-                            <img src="/img/img-container/Image44.png" alt="Comedy movie">
-                        </div>
-                        <div class='image-row img-four'>
-                            <img src="/img/img-container/Image45.png" alt="Comedy movie">
-                            <img src="/img/img-container/Image46.png" alt="Comedy movie">
-                        </div>
-                    </div>
-                    <div class='card-footer'>
-                        <div class="title-column">
-                            <button class="btn-top">Top 10 In</button>
-                            <h3>Comedy</h3>
-                        </div>
-                        <img src="/img/rightArrow.png" alt="arrow">
-                    </div>
-                </div>
-
-                <!-- Category 4 -->
-                <div class='category-card section-four'>
-                    <div class='card-images images-four'>
-                        <div class='image-row img-four'>
-                            <img src="/img/img-container/Image47.png" alt="Drama movie">
-                            <img src="/img/img-container/Image48.png" alt="Drama movie">
-                        </div>
-                        <div class='image-row img-four'>
-                            <img src="/img/img-container/Image49.png" alt="Drama movie">
-                            <img src="/img/img-container/Image50.png" alt="Drama movie">
-                        </div>
-                    </div>
-                    <div class='card-footer'>
-                        <div class="title-column">
-                            <button class="btn-top">Top 10 In</button>
-                            <h3>Drama</h3>
-                        </div>
-                        <img src="/img/rightArrow.png" alt="arrow">
+                <div class="indicator-wrap">
+                    <div class="indicator">
+                        <img src="/img/indicator.png" alt="indicator">
                     </div>
                 </div>
             </div>
@@ -320,102 +340,109 @@
             </div>
 
             <!-- кнопки с фотками -->
-            <div class='category-grid'>
-                <!-- Category 1 -->
-                <div class='category-card'>
-                    <div class='card-image'>
-                        <div class="one-img">
-                            <img src="/img/img-container/Image55.png" alt="morbius">
+            <div class="category-wrapper">
+                <div class='category-grid'>
+                    <!-- Category 1 -->
+                    <div class='category-card'>
+                        <div class='card-image'>
+                            <div class="one-img">
+                                <img src="/img/img-container/Image55.png" alt="morbius">
+                            </div>
+                        </div>
+                        <div class='card-footer'>
+                            <div class="statistick-block first">
+                                <img src="/img/time.png" alt="timer">
+                                <p>1h 30min</p>
+                            </div>
+                            <div class="statistick-block sec">
+                                <img src="/img/eye.png" alt="watch">
+                                <p>2K</p>
+                            </div>
                         </div>
                     </div>
-                    <div class='card-footer'>
-                        <div class="statistick-block first">
-                            <img src="/img/time.png" alt="timer">
-                            <p>1h 30min</p>
+
+                    <!-- Category 2 -->
+                    <div class='category-card'>
+                        <div class='card-image'>
+                            <div class="one-img">
+                                <img src="/img/img-container/Image56.png" alt="image56">
+                            </div>
                         </div>
-                        <div class="statistick-block sec">
-                            <img src="/img/eye.png" alt="watch">
-                            <p>2K</p>
+                        <div class='card-footer'>
+                            <div class="statistick-block first">
+                                <img src="/img/time.png" alt="timer">
+                                <p>1h 30min</p>
+                            </div>
+                            <div class="statistick-block sec">
+                                <img src="/img/eye.png" alt="watch">
+                                <p>2K</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Category 3 -->
+                    <div class='category-card'>
+                        <div class='card-image'>
+                            <div class="one-img">
+                                <img src="/img/img-container/Image57.png" alt="image57">
+                            </div>
+                        </div>
+                        <div class='card-footer'>
+                            <div class="statistick-block first">
+                                <img src="/img/time.png" alt="timer">
+                                <p>1h 30min</p>
+                            </div>
+                            <div class="statistick-block sec">
+                                <img src="/img/eye.png" alt="watch">
+                                <p>2K</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Category 4 -->
+                    <div class='category-card'>
+                        <div class='card-image'>
+                            <div class="one-img">
+                                <img src="/img/img-container/Image58.png" alt="image58">
+                            </div>
+                        </div>
+                        <div class='card-footer'>
+                            <div class="statistick-block first">
+                                <img src="/img/time.png" alt="timer">
+                                <p>1h 30min</p>
+                            </div>
+                            <div class="statistick-block sec">
+                                <img src="/img/eye.png" alt="watch">
+                                <p>2K</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Category 5 -->
+                    <div class='category-card'>
+                        <div class='card-image'>
+                            <div class="one-img">
+                                <img src="/img/img-container/Image24.png" alt="image59">
+                            </div>
+                        </div>
+                        <div class='card-footer'>
+                            <div class="statistick-block first">
+                                <img src="/img/time.png" alt="timer">
+                                <p>1h 30min</p>
+                            </div>
+                            <div class="statistick-block sec">
+                                <img src="/img/eye.png" alt="watch">
+                                <p>2K</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Category 2 -->
-                <div class='category-card'>
-                    <div class='card-image'>
-                        <div class="one-img">
-                            <img src="/img/img-container/Image56.png" alt="image56">
-                        </div>
-                    </div>
-                    <div class='card-footer'>
-                        <div class="statistick-block first">
-                            <img src="/img/time.png" alt="timer">
-                            <p>1h 30min</p>
-                        </div>
-                        <div class="statistick-block sec">
-                            <img src="/img/eye.png" alt="watch">
-                            <p>2K</p>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- Category 3 -->
-                <div class='category-card'>
-                    <div class='card-image'>
-                        <div class="one-img">
-                            <img src="/img/img-container/Image57.png" alt="image57">
-                        </div>
-                    </div>
-                    <div class='card-footer'>
-                        <div class="statistick-block first">
-                            <img src="/img/time.png" alt="timer">
-                            <p>1h 30min</p>
-                        </div>
-                        <div class="statistick-block sec">
-                            <img src="/img/eye.png" alt="watch">
-                            <p>2K</p>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- Category 4 -->
-                <div class='category-card'>
-                    <div class='card-image'>
-                        <div class="one-img">
-                            <img src="/img/img-container/Image58.png" alt="image58">
-                        </div>
-                    </div>
-                    <div class='card-footer'>
-                        <div class="statistick-block first">
-                            <img src="/img/time.png" alt="timer">
-                            <p>1h 30min</p>
-                        </div>
-                        <div class="statistick-block sec">
-                            <img src="/img/eye.png" alt="watch">
-                            <p>2K</p>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- Category 5 -->
-                <div class='category-card'>
-                    <div class='card-image'>
-                        <div class="one-img">
-                            <img src="/img/img-container/Image24.png" alt="image59">
-                        </div>
-                    </div>
-                    <div class='card-footer'>
-                        <div class="statistick-block first">
-                            <img src="/img/time.png" alt="timer">
-                            <p>1h 30min</p>
-                        </div>
-                        <div class="statistick-block sec">
-                            <img src="/img/eye.png" alt="watch">
-                            <p>2K</p>
-                        </div>
+                <div class="indicator-wrap">
+                    <div class="indicator">
+                        <img src="/img/indicator.png" alt="indicator">
                     </div>
                 </div>
             </div>
@@ -434,78 +461,85 @@
             </div>
 
             <!-- кнопки с фотками -->
-            <div class='category-grid'>
-                <!-- Category 1 -->
-                <div class='category-card'>
-                    <div class='card-image'>
-                        <div class="one-img">
-                            <img src="/img/img-container/Image59.png" alt="image60">
+            <div class="category-wrapper">
+                <div class='category-grid'>
+                    <!-- Category 1 -->
+                    <div class='category-card'>
+                        <div class='card-image'>
+                            <div class="one-img">
+                                <img src="/img/img-container/Image59.png" alt="image60">
+                            </div>
+                        </div>
+                        <div class='card-footer'>
+                            <div class="statistick-block text-release">
+                                <p>Released at 14 April 2023</p>
+                            </div>
+
                         </div>
                     </div>
-                    <div class='card-footer'>
-                        <div class="statistick-block text-release">
-                            <p>Released at 14 April 2023</p>
-                        </div>
 
+                    <!-- Category 2 -->
+                    <div class='category-card'>
+                        <div class='card-image'>
+                            <div class="one-img">
+                                <img src="/img/img-container/Image60.png" alt="image">
+                            </div>
+                        </div>
+                        <div class='card-footer'>
+                            <div class="statistick-block text-release">
+                                <p>Released at 22 April 2023</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Category 3 -->
+                    <div class='category-card'>
+                        <div class='card-image'>
+                            <div class="one-img">
+                                <img src="/img/img-container/Image61.png" alt="image">
+                            </div>
+                        </div>
+                        <div class='card-footer'>
+                            <div class="statistick-block text-release">
+                                <p>Released at 13 April 2023</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Category 4 -->
+                    <div class='category-card'>
+                        <div class='card-image'>
+                            <div class="one-img">
+                                <img src="/img/img-container/Image62.png" alt="image58">
+                            </div>
+                        </div>
+                        <div class='card-footer'>
+                            <div class="statistick-block text-release">
+                                <p>Released at 19 April 2023</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Category 5 -->
+                    <div class='category-card'>
+                        <div class='card-image'>
+                            <div class="one-img">
+                                <img src="/img/img-container/Image63.png" alt="image59">
+                            </div>
+                        </div>
+                        <div class='card-footer'>
+                            <div class="statistick-block text-release">
+                                <p>Released at 11 April 2023</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <!-- Category 2 -->
-                <div class='category-card'>
-                    <div class='card-image'>
-                        <div class="one-img">
-                            <img src="/img/img-container/Image60.png" alt="image">
-                        </div>
-                    </div>
-                    <div class='card-footer'>
-                        <div class="statistick-block text-release">
-                            <p>Released at 22 April 2023</p>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- Category 3 -->
-                <div class='category-card'>
-                    <div class='card-image'>
-                        <div class="one-img">
-                            <img src="/img/img-container/Image61.png" alt="image">
-                        </div>
-                    </div>
-                    <div class='card-footer'>
-                        <div class="statistick-block text-release">
-                            <p>Released at 13 April 2023</p>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- Category 4 -->
-                <div class='category-card'>
-                    <div class='card-image'>
-                        <div class="one-img">
-                            <img src="/img/img-container/Image62.png" alt="image58">
-                        </div>
-                    </div>
-                    <div class='card-footer'>
-                        <div class="statistick-block text-release">
-                            <p>Released at 19 April 2023</p>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- Category 5 -->
-                <div class='category-card'>
-                    <div class='card-image'>
-                        <div class="one-img">
-                            <img src="/img/img-container/Image63.png" alt="image59">
-                        </div>
-                    </div>
-                    <div class='card-footer'>
-                        <div class="statistick-block text-release">
-                            <p>Released at 11 April 2023</p>
-                        </div>
+                <div class="indicator-wrap">
+                    <div class="indicator">
+                        <img src="/img/indicator.png" alt="indicator">
                     </div>
                 </div>
             </div>
@@ -523,92 +557,98 @@
                 </div>
             </div>
 
-            <div class='category-grid category-four'>
-                <!-- Category 1 -->
-                <div class='category-card section-four'>
-                    <div class='card-image biggest-card'>
-                        <div class="one-img big-img">
-                            <img src="/img/img-container/Image64.png" alt="img">
+            <div class="category-wrapper">
+                <div class='category-grid category-four'>
+                    <!-- Category 1 -->
+                    <div class='category-card section-four'>
+                        <div class='card-image biggest-card'>
+                            <div class="one-img big-img">
+                                <img src="/img/img-container/Image64.png" alt="img">
+                            </div>
+                        </div>
+                        <div class='card-footer'>
+                            <div class="statistick-block first">
+                                <img src="/img/time.png" alt="timer">
+                                <p>1h 30min</p>
+                            </div>
+                            <div class="statistick-block stars">
+                                <img src="/img/stars-1.png" alt="watch">
+                                <p>2K</p>
+                            </div>
                         </div>
                     </div>
-                    <div class='card-footer'>
-                        <div class="statistick-block first">
-                            <img src="/img/time.png" alt="timer">
-                            <p>1h 30min</p>
+
+                    <!-- Category 2 -->
+                    <div class='category-card section-four'>
+                        <div class='card-image biggest-card'>
+                            <div class="one-img big-img">
+                                <img src="/img/img-container/Image65.png" alt="image">
+                            </div>
                         </div>
-                        <div class="statistick-block stars">
-                            <img src="/img/stars-1.png" alt="watch">
-                            <p>2K</p>
+                        <div class='card-footer'>
+                            <div class="statistick-block first">
+                                <img src="/img/time.png" alt="timer">
+                                <p>1h 30min</p>
+                            </div>
+                            <div class="statistick-block stars">
+                                <img src="/img/stars-2.png" alt="watch">
+                                <p>2K</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Category 3 -->
+                    <div class='category-card section-four'>
+                        <div class='card-image biggest-card'>
+                            <div class="one-img big-img">
+                                <img src="/img/img-container/Image66.png" alt="image">
+                            </div>
+                        </div>
+                        <div class='card-footer'>
+                            <div class="statistick-block first">
+                                <img src="/img/time.png" alt="timer">
+                                <p>1h 30min</p>
+                            </div>
+                            <div class="statistick-block stars">
+                                <img src="/img/stars-1.png" alt="watch">
+                                <p>2K</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Category 4 -->
+                    <div class='category-card section-four'>
+                        <div class='card-image biggest-card'>
+                            <div class="one-img big-img">
+                                <img src="/img/img-container/Image67.png" alt="image">
+                            </div>
+                        </div>
+                        <div class='card-footer'>
+                            <div class="statistick-block first">
+                                <img src="/img/time.png" alt="timer">
+                                <p>1h 30min</p>
+                            </div>
+                            <div class="statistick-block stars">
+                                <img src="/img/stars-2.png" alt="watch">
+                                <p>2K</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Category 2 -->
-                <div class='category-card section-four'>
-                    <div class='card-image biggest-card'>
-                        <div class="one-img big-img">
-                            <img src="/img/img-container/Image65.png" alt="image">
-                        </div>
-                    </div>
-                    <div class='card-footer'>
-                        <div class="statistick-block first">
-                            <img src="/img/time.png" alt="timer">
-                            <p>1h 30min</p>
-                        </div>
-                        <div class="statistick-block stars">
-                            <img src="/img/stars-2.png" alt="watch">
-                            <p>2K</p>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- Category 3 -->
-                <div class='category-card section-four'>
-                    <div class='card-image biggest-card'>
-                        <div class="one-img big-img">
-                            <img src="/img/img-container/Image66.png" alt="image">
-                        </div>
-                    </div>
-                    <div class='card-footer'>
-                        <div class="statistick-block first">
-                            <img src="/img/time.png" alt="timer">
-                            <p>1h 30min</p>
-                        </div>
-                        <div class="statistick-block stars">
-                            <img src="/img/stars-1.png" alt="watch">
-                            <p>2K</p>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- Category 4 -->
-                <div class='category-card section-four'>
-                    <div class='card-image biggest-card'>
-                        <div class="one-img big-img">
-                            <img src="/img/img-container/Image67.png" alt="image">
-                        </div>
-                    </div>
-                    <div class='card-footer'>
-                        <div class="statistick-block first">
-                            <img src="/img/time.png" alt="timer">
-                            <p>1h 30min</p>
-                        </div>
-                        <div class="statistick-block stars">
-                            <img src="/img/stars-2.png" alt="watch">
-                            <p>2K</p>
-                        </div>
+                <div class="indicator-wrap">
+                    <div class="indicator">
+                        <img src="/img/indicator.png" alt="indicator">
                     </div>
                 </div>
             </div>
         </div>
 
-
         <!-- block Shows -->
-        <div class="movie-block">
+        <div class="show-block">
             <div class="movie-btn">
-                <a href="page6.html" class="button">
+                <a href="/HTML/page6.html" class="button">
                     <span class="btn-text">Shows</span>
                 </a>
             </div>
@@ -1163,9 +1203,9 @@
                     <img class='free-img' src='/img/img-container/Image36.png'>
                 </div>
             </div>
-    
-    
-            <div class="text-wrap" >
+
+
+            <div class="text-wrap">
                 <div class='text-block'>
                     <h1>Start your free trial today!</h1>
                     <p>This is a clear and concise call to action that encourages users to sign up for a free trial of
