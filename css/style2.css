@@ -157,7 +157,7 @@ header {
     justify-content: center;
     text-align: center;
     color: white;
-    margin-bottom: 60px;
+    /* margin-bottom: 60px; */
 }
 
 .text-container {
@@ -183,6 +183,7 @@ header {
 .indicator {
     display: none;
 }
+
 .button {
     background-color: #e50000;
     width: 128px;
@@ -194,7 +195,6 @@ header {
     justify-content: center;
     cursor: pointer;
     text-decoration: none;
-    margin-top: 20px;
 }
 
 .button:active,
@@ -231,12 +231,13 @@ header {
 }
 
 .bottom-block {
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     border-radius: 12px;
+    margin-bottom: 80px;
 }
 
 .btn-arrow {
@@ -279,7 +280,7 @@ header {
 .category-grid {
     display: flex;
     gap: 15px;
-    overflow-x: auto;
+    /* overflow-x: auto; */
     margin-bottom: 40px;
     width: 100%;
     max-width: 1920px;
@@ -503,6 +504,10 @@ header {
     max-width: 1920px;
 }
 
+.text-block {
+    text-align: left;
+}
+
 .text-wrap {
     position: absolute;
     display: flex;
@@ -626,7 +631,6 @@ header {
     padding: 12px 12px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: flex-start;
     gap: 10px;
     font-size: 13px;
@@ -634,8 +638,8 @@ header {
 
 .footer-title {
     font-size: 20px;
-    text-align: center;
     margin-bottom: 15px;
+    padding: 10px 16px;
 }
 
 .footer-link {
@@ -1001,6 +1005,7 @@ header {
         width: 225px;
     }
 
+    /* free trial period */
     .section-free {
         width: 100%;
         max-width: 358px;
@@ -1045,6 +1050,7 @@ header {
         flex-direction: column;
     }
 
+    /* footer */
     .footer {
         width: 100%;
         height: auto;
@@ -1082,5 +1088,65 @@ header {
     .copyright {
         display: flex;
         padding-left: 6px;
+    }
+}
+
+/* desktop */
+@media (width: 1920px) {
+    .top-block {
+        margin-bottom: 20px;
+    }
+
+    .text-container h1 {
+        font-size: 38px;
+    }
+
+    .text-container p {
+        font-size: 18px;
+    }
+
+    .bottom-block {
+        margin-bottom: 180px;
+    }
+
+    /* movie block */
+    .movie-block,
+    .show-block {
+        margin: 100px;
+        max-width: 1700px;
+    }
+
+     /* category card */
+     .category-card {
+        width: 265px;
+        height: 300px;
+    }
+
+    .category-grid {
+        max-width: 1920px;
+    }
+
+    .card-images img {
+        height: 115px;
+        width: 123px;
+    }
+
+    .card-footer {
+        margin-top: 40px;
+    }
+
+    .card-footer h3 {
+        font-size: 24px;
+    }
+
+    .card-footer img {
+        width: 30px;
+        height: 30px;
+    }
+
+      /* free trial period */
+      .free-img {
+        height: 93px;
+        width: 190px;
     }
 }
