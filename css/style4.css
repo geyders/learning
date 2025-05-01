@@ -142,7 +142,7 @@ header {
 .pricing-card {
     background-color: #1a1a1a;
     border-radius: 12px;
-    max-width: 380px;
+    max-width: 360px;
     padding: 32px 24px;
     display: flex;
     flex-direction: column;
@@ -687,7 +687,7 @@ th span {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        
+
     }
 
     .text-wrap {
@@ -733,5 +733,60 @@ th span {
     .copyright {
         display: flex;
         padding-left: 6px;
+    }
+}
+
+@media (width: 1920px) {
+    .pricing-card {
+        max-width: 512px;
+        width: 512px;
+        height: 425px;
+    }
+
+    .pricing-card h3 {
+        font-size: 24px;
+    }
+
+    .pricing-card p {
+        font-size: 18px;
+    }
+
+    .btn-container {
+        margin-top: 50px;
+        width: 412px;
+        height: 63px;
+    }
+
+    .choose-btn,
+    .secondary-btn {
+        width: 196px;
+    }
+
+    .price-text {
+        width: 412px;
+        height: 133px;
+    }
+
+
+    .pricing-inside {
+       padding: 0 20px;
+    }
+    .price {
+        font-size: 40px;
+        margin-top: 90px;
+    }
+
+    .price span {
+        font-size: 18px;
+    }
+
+    /* free trial period */
+    .free-img {
+        height: 93px;
+        width: 190px;
+    }
+
+    .free-block {
+        max-width: 1650px;
     }
 }
