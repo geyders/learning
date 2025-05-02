@@ -598,7 +598,7 @@ header {
     position: relative;
     height: auto;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1500px;
     object-fit: cover;
     grid-area: 1 / 1;
 }
@@ -621,7 +621,7 @@ header {
 
 .free-img {
     height: 73px;
-    width: 124px;
+    width: 160px;
     max-width: 165px;
     max-height: 83px;
     object-fit: cover;
@@ -980,6 +980,10 @@ header {
         padding: 0;
     }
 
+    .right-block {
+        width: 315px;
+    }
+
     .section-header {
         padding: 16px 20px 0 20px;
         display: flex;
@@ -1009,7 +1013,7 @@ header {
         width: 100%;
         max-width: 358px;
         height: 344px;
-        padding: 10px 10px 10px 30px;
+        padding: 10px;
     }
 
     .free-block {

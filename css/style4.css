@@ -783,10 +783,14 @@ th span {
     /* free trial period */
     .free-img {
         height: 93px;
-        width: 190px;
+        width: 200px;
     }
 
+    .text-wrap {
+        max-width: 1500px;
+        justify-content: space-between;
+    }
     .free-block {
-        max-width: 1650px;
+        max-width: 1900px;
     }
 }
