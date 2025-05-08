@@ -1,44 +1,4 @@
-$main-color: #1e1e1e;
-$bg-dark: #0f0f0f;
-$border-dark: #1a1a1a;
-$text-color: #999999;
-$white: #ffffff;
-$accent-color: #e50000;
-
-@mixin flex-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-@mixin primary-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    width: 200px;
-    height: 54px;
-    margin-top: 15px;
-    padding: 0;
-    border: none;
-    border-radius: 8px;
-    background: $accent-color;
-    color: $white;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.4s ease, box-shadow 0.4s ease;
-}
-
-@mixin red-btn {
-    background-color: $accent-color;
-    width: 128px;
-    height: 52px;
-    border-radius: 8px;
-    border: none;
-    @include flex-center;
-    cursor: pointer;
-    text-decoration: none;
-}
+@use '../mixins/mixins' as *;
 
 body {
     background-color: $main-color;
@@ -53,68 +13,9 @@ header {
     margin: 0 auto;
 
     .navbar {
-        padding: 24px 80px;
-        max-height: 100px;
-        grid-column: 1 / span 9;
-        grid-row: 1 / span 4;
-        z-index: 3;
-        display: grid;
-        grid-auto-flow: column;
-        justify-content: space-between;
-        align-items: center;
-
-        .logo {
-            display: flex;
-            max-width: 500px;
-            max-height: 160px;
-        }
-
-        .lines {
-            display: none;
-        }
-
-        .nav-links {
-            max-width: 600px;
-            background-color: $bg-dark;
-            @include flex-center;
-            gap: 30px;
-            border-radius: 12px;
-            padding: 10px;
-            border: 4px solid $border-dark;
-        }
-
-        .nav-link {
-            color: #bfbfbf;
-            font-size: 18px;
-            text-decoration: none;
-            padding: 10px;
-            height: 35px;
-            @include flex-center;
-            border-radius: 8px;
-            transition: background-color 0.2s ease;
-
-            &.active,
-            &:active {
-                background-color: $border-dark;
-                color: $white;
-                border-radius: 12px;
-                transform: translateY(2px);
-            }
-        }
+        @include navbar;
     }
 
-    .btn-container1 {
-        background-color: none;
-
-        .icon-btn1 {
-            background-color: transparent;
-            border: none;
-
-            &:active {
-                transform: translateY(2px);
-            }
-        }
-    }
 
     .top-section {
         display: grid;
@@ -140,7 +41,7 @@ header {
             border-radius: 12px;
             box-sizing: border-box;
             z-index: 0;
-            mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 15%, rgba(0, 0, 0, 0.708) 45%, transparent 100%);
+            mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 5%, rgba(0, 0, 0, 0.7) 15%, transparent 100%);
         }
 
         .top-wrap {
@@ -215,7 +116,7 @@ header {
             flex-direction: row;
             justify-content: space-between;
             border-radius: 12px;
-            margin-bottom: 80px;
+            margin-bottom: 180px;
 
             .btn-arrow {
                 border: none;
@@ -238,14 +139,18 @@ main {
         position: relative;
         display: flex;
         flex-direction: column;
-        margin: 100px auto 0 auto;
-        padding: 0 40px;
+        margin: 80px;
+        padding: 0 60px;
         border: 2px solid #262626;
         border-radius: 12px;
         height: auto;
-        max-width: 1350px;
+        max-width: 1750px;
         width: 100%;
         box-sizing: border-box;
+
+        @media (max-width: $laptop) {
+            width: 90%;
+        }
 
         .movie-btn {
             position: absolute;
@@ -263,7 +168,6 @@ main {
             @include flex-center;
             justify-content: space-between;
             margin: 40px 0;
-            max-width: 1920px;
 
             .text-block {
                 h1 {
@@ -302,30 +206,92 @@ main {
             }
         }
 
-        .category {
+        .category-wrapper {
+            @include genres-cards;
+        }
 
-            &-grid {
-                display: flex;
-                justify-content: center;
-                gap: 15px;
-                padding: 20px;
-                overflow-x: auto;
-                margin-bottom: 40px;
-                max-width: 1920px;
+        .section-four {
+            @include card;
+            width: 330px;
+            height: 378px;
+
+            @media (max-width: $laptop) {
+                width: 210px;
+                height: 240px;
             }
+        }
 
-            &-card {
-                background-color: $border-dark;
-                border-radius: 12px;
-                padding: 30px;
-                width: 165px;
-                flex-shrink: 0;
-                border: 4px solid #262626;
+        .images-four {
+            display: flex;
+            gap: 10px;
+            mask-image: linear-gradient(to bottom, transparent 0%, black 0%, black 35%, transparent 100%);
+
+            img {
+                width: 160px;
+                height: 140px;
+
+                @media (max-width: $laptop) {
+                    width: 100px;
+                    height: 90px;
+                }
             }
         }
 
         .indicator {
             display: none;
+        }
+
+        .must-watches {
+            @include card;
+            width: 360px;
+            height: 500px;
+
+            @media (max-width: $laptop) {
+                width: 235px;
+                height: 350px;
+                padding: 20px;
+            }
+        }
+
+        .tranding {
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 25px;
+
+            .timing {
+                @include statistic;
+                width: 108px;
+
+            }
+
+            .watches {
+                @include statistic;
+                width: 64px;
+            }
+
+            .stars {
+                @include statistic;
+                width: 148px;
+            }
+
+            .season {
+                @include statistic;
+                width: 113px;
+            }
+        }
+
+        .shows-card {
+            @include card;
+            width: 359px;
+            height: 444px;
+
+            @media (max-width: $laptop) {
+                width: 235px;
+                height: 350px;
+                padding: 20px;
+            }
         }
 
         .card {
@@ -336,10 +302,21 @@ main {
                 mask-image: linear-gradient(to bottom, transparent 0%, black 0%, black 35%, transparent 100%);
 
                 img {
-                    height: 80px;
-                    width: 80px;
+                    height: 132px;
+                    width: 120px;
                     object-fit: cover;
                     border-radius: 8px;
+
+                    @media (max-width: $laptop) {
+                        width: 74px;
+                        height: 80px;
+                    }
+
+                    @media (max-width: $mobile) {
+                        width: 60px;
+                        height: 60px;
+                        object-fit: contain;
+                    }
                 }
             }
 
@@ -347,121 +324,83 @@ main {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                margin-top: 15px;
+                margin-top: 35px;
+
+                @media(max-width: $laptop) {
+                    margin-top: 20px;
+                }
 
                 h3 {
-                    font-size: 15px;
+                    font-size: 18px;
                     margin: 0;
+
+                    @media (max-width: $laptop) {
+                        font-size: 16px;
+                    }
                 }
 
                 img {
                     height: 18px;
                     width: 18px;
                 }
+
+                .btn-top {
+                    background-color: #e50000;
+                    color: #ffffff;
+                    border: none;
+                    border-radius: 5px;
+                    height: 25px;
+                    width: 70px;
+                }
+
+                .text-release {
+                    @include statistic;
+                    width: 243px;
+
+                    @media (max-width: $laptop) {
+                        font-size: 12px;
+                    }
+                }
+
             }
         }
+    }
+
+    .trending-card {
+        @include card;
+
+        @media(max-width: $laptop) {
+            height: 280px;
+            width: 175px;
+            padding: 20px;
+        }
+    }
+
+    .card-image {
+        @media(max-width: $laptop) {
+            img {
+                width: 175px;
+                height: 200px;
+            }
+        }
+    }
+
+    .big-img {
+        @media (max-width: $laptop) {
+            img {
+                width: 240px;
+                height: 280px
+            }
+        }
+    }
+
+    .free-period {
+        @include free-period;
     }
 }
 
 footer {
     background-color: $bg-dark;
 
-    .footer {
-        padding: 10px;
-        max-width: 100%;
-
-        &-grid {
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            gap: 16px;
-            max-width: 1920px;
-            width: 100%;
-        }
-
-        &-column {
-            background-color: $bg-dark;
-            border-radius: 12px;
-            padding: 12px 12px;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            gap: 10px;
-            font-size: 13px;
-        }
-
-        &-title {
-            font-size: 20px;
-            margin-bottom: 15px;
-            padding: 10px 16px;
-        }
-
-        &-link {
-            padding: 10px 16px;
-            background-color: $bg-dark;
-            color: $white;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.2s ease;
-            text-align: left;
-            font-size: 14px;
-
-            &:hover {
-                background-color: #555;
-            }
-        }
-
-        &-bottom {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 30px;
-            color: #999;
-            font-size: 14px;
-        }
-    }
-
-    .social {
-        &-links {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-        }
-
-        &-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 0;
-
-            img {
-                width: 24px;
-                height: 24px;
-            }
-        }
-    }
-
-    .legal {
-        &-links {
-            display: flex;
-            gap: 15px;
-
-            button {
-                background: none;
-                border: none;
-                color: #999;
-                cursor: pointer;
-                font-size: 14px;
-                width: 100px;
-                height: 21px;
-
-                &:hover {
-                    color: $white;
-                }
-            }
-
-
-        }
-    }
+    @include footer;
 }
