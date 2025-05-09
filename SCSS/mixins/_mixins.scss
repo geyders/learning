@@ -332,6 +332,503 @@ $laptop: 1440px;
     }
 }
 
+@mixin dark-block {
+    background-color: $border-dark;
+    max-width: 1920px;
+    width: auto;
+    height: 162px;
+    border-radius: 12px;
+    border: 1px solid #262626;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 30px;
+
+    .title {
+        font-size: 18px;
+        color: $text-color;
+    }
+
+    .text {
+        font-size: 18px;
+        color: $white;
+    }
+}
+
+
+@mixin cast-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+@mixin heads {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3px;
+    min-height: 24px;
+    height: 100%;
+    font-size: 16px;
+    color: $text-color;
+
+    img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@mixin faq-section {
+    &-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, auto);
+        gap: 15px;
+        padding: 60px 80px 0px 80px;
+        margin-top: 40px;
+
+        @media (max-width: $laptop) {
+            padding: 20px;
+        }
+
+        @media (max-width: $mobile) {
+            display: grid;
+            grid-template-columns: 1fr;
+            padding: 30px 0;
+            gap: 15px;
+        }
+    }
+
+    &-item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 24px;
+        border-radius: 12px;
+        gap: 10px;
+        border-bottom: none;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background: $accent-color;
+            mask-image: linear-gradient(to right, transparent, black 30%, black 70%, transparent);
+        }
+    }
+
+    &-active {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-number {
+        background-color: #1f1f1f;
+        border: 1px solid #262626;
+        color: $white;
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 10px;
+        width: 50px;
+        height: 50px;
+        @include flex-center;
+        flex-shrink: 0;
+    }
+
+    &-question {
+        font-size: 17px;
+        margin: 0;
+        flex-grow: 1;
+    }
+
+    &-answer {
+        font-size: 13px;
+        color: $white;
+        margin-top: 10px;
+    }
+
+    &-icon {
+        max-height: 20px;
+        max-width: 20px;
+        margin-left: auto;
+    }
+}
+
+@mixin wrapper {
+    max-width: 1920px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: center;
+
+    .block-column {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        max-width: 1920px;
+        width: auto;
+
+        .description,
+        .review {
+            @include dark-block;
+        }
+
+
+        .cast {
+            height: 233px;
+            @include dark-block;
+
+            &-head {
+                @include cast-head;
+            }
+
+            &-arrow {
+                border-radius: 100px;
+                background-color: #141414;
+                border: 1px solid #262626;
+                width: 44px;
+                height: 44px;
+
+                &:active {
+                    transform: translateY(2px);
+                }
+
+                .review {
+                    min-height: 455px;
+                    justify-content: space-between;
+                }
+            }
+
+            .photo-grid {
+                display: flex;
+                flex-direction: row;
+                gap: 25px;
+                max-width: 770px;
+
+                img {
+                    width: 87px;
+                    height: 89px;
+                }
+            }
+        }
+
+        .review {
+            min-height: 455px;
+            justify-content: space-between;
+            flex-direction: column;
+
+            .cast-head {
+                @include cast-head;
+            }
+
+            .add-btn {
+                @include flex-center;
+                gap: 8px;
+                background-color: #141414;
+                border: 1px solid #262626;
+                border-radius: 6px;
+                color: $white;
+                max-width: 160px;
+                width: 100%;
+                min-height: 48px;
+                font-size: 14px;
+            }
+
+            .arrows {
+                @include flex-center;
+                flex-direction: row;
+                gap: 5px;
+                height: 44px;
+                margin-top: auto;
+            }
+        }
+    }
+}
+
+@mixin two-blocks {
+    @include flex-center;
+    margin-top: 30px;
+    gap: 8px;
+
+    .small-block {
+        background-color: #0f0f0f;
+        border: 1px solid #262626;
+        border-radius: 12px;
+        max-width: 377px;
+        max-height: 223px;
+        padding: 25px;
+
+        .aniket {
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+                margin-bottom: 4px;
+            }
+
+            p {
+                font-size: 16px;
+                color: $text-color;
+                margin: 0;
+            }
+
+            .rate {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+
+                .star-rate {
+                    @include flex-center;
+                    flex-direction: row;
+                    background-color: #141414;
+                    border-radius: 51px;
+                    border: 1px solid #262626;
+                    width: 120px;
+                    max-height: 29px;
+                    gap: 2px;
+
+                    img {
+                        max-width: 74px;
+                        max-height: 14px;
+                    }
+
+                    p {
+                        font-size: 14px;
+                        color: $text-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin right-block {
+    width: 100%;
+    max-width: 510px;
+    height: 100%;
+    min-height: 762px;
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    border: 1px solid #262626;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+
+    .released {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+
+
+        p {
+            font-weight: 600;
+            margin: 0px;
+        }
+    }
+
+    .languages {
+        .languages-btn {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            max-width: 300px;
+            width: 100%;
+            flex-wrap: wrap;
+
+            button {
+                @include lng-btn;
+            }
+        }
+    }
+
+    .ratings {
+        .rate-row {
+            display: flex;
+            flex-direction: row;
+            gap: 16px;
+        }
+
+        .rating-block {
+            display: flex;
+            flex-direction: column;
+            background-color: #141414;
+            border: 1px solid #262626;
+            border-radius: 8px;
+            max-width: 160px;
+            width: 100%;
+            padding: 10px;
+
+            p {
+                align-items: flex-start;
+                margin: 5px;
+            }
+
+            .star {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                flex-direction: row;
+                border: none;
+                width: 120px;
+                max-height: 29px;
+                gap: 2px;
+            }
+        }
+    }
+
+    .genres {
+        button {
+            @include lng-btn;
+        }
+    }
+}
+
+@mixin dev {
+    display: flex;
+    flex-direction: row;
+    background-color: #141414;
+    border: 1px solid #262626;
+    border-radius: 8px;
+
+    img {
+        min-height: 50px;
+        height: 100%;
+        margin: 25px;
+
+        .name {
+            p {
+                color: $text-color;
+            }
+        }
+    }
+}
+
+@mixin season {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+
+    p {
+        font-size: 18px;
+        color: $text-color;
+    }
+}
+
+@mixin top-section {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+    max-height: 835px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 80px;
+    box-sizing: border-box;
+
+    .big-image {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        grid-area: 1 / 1;
+        filter: brightness(70%);
+        border: 1px solid #262626;
+        border-radius: 12px;
+        box-sizing: border-box;
+        z-index: 0;
+        mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 5%, rgba(0, 0, 0, 0.7) 15%, transparent 100%);
+    }
+
+    .top-wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        grid-area: 1 / 1;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+
+        .top-block {
+            @include flex-center;
+            flex-direction: column;
+            text-align: center;
+            color: $white;
+            margin-bottom: 180px;
+
+            .text-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                max-width: 1200px;
+
+
+                h1 {
+                    font-size: 38px;
+                    margin: 0;
+                }
+
+                p {
+                    color: $text-color;
+                    font-size: 18px;
+                    line-height: 1.5;
+                }
+            }
+        }
+
+        .btn {
+            &-block {
+                @include flex-center;
+                gap: 10px;
+
+                .button {
+                    @include red-btn;
+                }
+
+                .mini-btn {
+                    width: 48px;
+                    height: 48px;
+                    background-color: $bg-dark;
+                    color: $white;
+                    border: 1px solid #262626;
+                    border-radius: 8px;
+                    cursor: pointer;
+                    transition: background-color 0.2s ease;
+                }
+            }
+
+            &-text {
+                font-size: 16px;
+                color: $white;
+            }
+        }
+    }
+}
+
+
+@mixin lng-btn {
+    background-color: #141414;
+    border: 1px solid #262626;
+    border-radius: 6px;
+    color: $white;
+    max-width: 92px;
+    width: auto;
+    min-height: 33px;
+}
+
 @mixin free-period {
     .section-free {
         display: grid;

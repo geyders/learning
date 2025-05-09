@@ -1,0 +1,252 @@
+@use '../mixins/mixins' as *;
+
+body {
+    background-color: $main-color;
+    font-family: 'Manrope', sans-serif;
+    color: $white;
+}
+
+
+header {
+    position: relative;
+    max-width: 1920px;
+    margin: 0 auto;
+
+    .navbar {
+        @include navbar;
+    }
+
+    .top-section {
+        @include top-section;
+    }
+}
+
+main {
+    .wrapper {
+        @include wrapper;
+
+        .block-column {
+            width: 1100px;
+        }
+    }
+
+    .two-blocks {
+        @include two-blocks;
+    }
+
+    .right-block {
+        @include right-block;
+        width: 600px
+    }
+
+    .dev {
+        @include dev;
+    }
+
+    .heads {
+        @include heads;
+    }
+
+
+
+    .three-blocks {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .season-block {
+        height: 1300px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        background-color: $border-dark;
+        max-width: 1920px;
+        width: auto;
+        border-radius: 12px;
+        border: 1px solid #262626;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        padding: 30px;
+
+        .three-blocks {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+
+            .heading-block {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                background-color: $bg-dark;
+                border: 1px solid #262626;
+                border-radius: 12px;
+                padding: 20px;
+
+
+                .season {
+                    @include season;
+                }
+
+            }
+        }
+    }
+
+
+
+
+    .season-wrap {
+        height: auto;
+        background-color: $bg-dark;
+        border: 1px solid #262626;
+        border-radius: 12px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+
+        .season-two {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+
+            .season {
+                @include season;
+            }
+        }
+
+    }
+
+    .chapters-wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 20px;
+    }
+
+    .chapter {
+        display: flex;
+        flex-direction: row;
+        border-top: 1px solid #262626;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 18px;
+
+
+        .chapter-video {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 10px;
+
+            .number {
+                margin: 10;
+                font-size: 30px;
+                color: $text-color;
+            }
+
+            .video {
+                display: grid;
+                place-items: center;
+                max-width: 172px;
+                max-height: 118px;
+                position: relative;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    filter: brightness(50%);
+                    border-radius: 12px;
+                    border: 1px solid #262626;
+                    grid-area: 1 / 1;
+                }
+            }
+        }
+    }
+
+
+    .pause {
+        width: 50px;
+        height: 50px;
+        background-color: #000000;
+        opacity: 0.6;
+        border: none;
+        border-radius: 67px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        grid-area: 1 / 1;
+        z-index: 1;
+
+        img {
+            width: 30px;
+            height: 30px;
+            z-index: 2;
+        }
+    }
+
+
+
+    .chapter-time {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .time {
+            @include flex-center;
+            width: 98px;
+            height: 40px;
+            background-color: #141414;
+            border: 1px solid #262626;
+            border-radius: 8px;
+            flex-direction: row;
+            justify-content: center;
+            gap: 5px;
+
+            p {
+                margin: 0;
+                font-size: 16px;
+                color: #999999;
+            }
+
+            img {
+                max-height: 18px;
+                max-height: 18px;
+            }
+        }
+    }
+
+    .chapter-text {
+        display: flex;
+        flex-direction: column;
+        max-width: 610px;
+
+        p {
+            margin: 0;
+            font-size: 18px;
+            color: $text-color;
+        }
+    }
+
+
+
+
+
+    .free-period {
+        @include free-period;
+    }
+}
+
+footer {
+    background-color: $bg-dark;
+
+    @include footer;
+}
