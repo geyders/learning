@@ -27,6 +27,10 @@ main {
 
         .block-column {
             width: 1100px;
+
+            @media (max-width: $mobile) {
+                width: 358px;
+            }
         }
     }
 
@@ -70,6 +74,10 @@ main {
         flex-direction: column;
         padding: 30px;
 
+        @media (max-width: $mobile) {
+            height: 1810px;
+        }
+
         .three-blocks {
             display: flex;
             flex-direction: column;
@@ -85,9 +93,22 @@ main {
                 border-radius: 12px;
                 padding: 20px;
 
+                @media (max-width: $mobile) {
+                    justify-content: space-evenly;
+                }
 
                 .season {
                     @include season;
+
+                    @media (max-width: $mobile) {
+                        h2 {
+                            font-size: 16px;
+                        }
+
+                        p {
+                            font-size: 14px;
+                        }
+                    }
                 }
 
             }
@@ -115,8 +136,22 @@ main {
             align-items: center;
             padding: 20px;
 
+            @media (max-width: $mobile) {
+                justify-content: space-evenly;
+            }
+
             .season {
                 @include season;
+
+                @media(max-width: $mobile) {
+                    h2 {
+                        font-size: 16px;
+                    }
+
+                    p {
+                        font-size: 14px;
+                    }
+                }
             }
         }
 
@@ -137,6 +172,9 @@ main {
         justify-content: space-evenly;
         gap: 18px;
 
+        @media (max-width: $mobile) {
+            flex-direction: column;
+        }
 
         .chapter-video {
             display: flex;
@@ -145,10 +183,19 @@ main {
             gap: 30px;
             margin-top: 10px;
 
+            @media (max-width: $mobile) {
+                gap: 10px;
+            }
+
             .number {
                 margin: 10;
                 font-size: 30px;
                 color: $text-color;
+
+                @media (max-width: $mobile) {
+                    order: 2;
+                    margin: 25px;
+                }
             }
 
             .video {
@@ -157,6 +204,10 @@ main {
                 max-width: 172px;
                 max-height: 118px;
                 position: relative;
+
+                @media (max-width: $mobile) {
+                    order: 1;
+                }
 
                 img {
                     width: 100%;
@@ -200,6 +251,12 @@ main {
         justify-content: space-between;
         align-items: center;
 
+        @media (max-width: $mobile) {
+            flex-direction: column-reverse;
+            align-items: flex-start;
+            width: 271px;
+        }
+
         .time {
             @include flex-center;
             width: 98px;
@@ -229,16 +286,20 @@ main {
         flex-direction: column;
         max-width: 610px;
 
+        @media (max-width: $mobile) {
+            order: 3;
+        }
+
         p {
             margin: 0;
             font-size: 18px;
             color: $text-color;
+
+            @media (max-width: $mobile) {
+                display: none;
+            }
         }
     }
-
-
-
-
 
     .free-period {
         @include free-period;

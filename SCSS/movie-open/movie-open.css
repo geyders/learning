@@ -130,6 +130,14 @@ header .top-section {
   padding: 0 80px;
   box-sizing: border-box;
 }
+@media (max-width: 425px) {
+  header .top-section {
+    width: 358px;
+    height: 468px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+}
 header .top-section .big-image {
   width: 100%;
   height: auto;
@@ -144,6 +152,12 @@ header .top-section .big-image {
   -webkit-mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 5%, rgba(0, 0, 0, 0.7) 15%, transparent 100%);
           mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 5%, rgba(0, 0, 0, 0.7) 15%, transparent 100%);
 }
+@media (max-width: 425px) {
+  header .top-section .big-image {
+    width: 100%;
+    height: 468px;
+  }
+}
 header .top-section .top-wrap {
   display: flex;
   flex-direction: column;
@@ -155,6 +169,11 @@ header .top-section .top-wrap {
   height: 100%;
   box-sizing: border-box;
 }
+@media (max-width: 425px) {
+  header .top-section .top-wrap {
+    padding: 16px;
+  }
+}
 header .top-section .top-wrap .top-block {
   display: flex;
   align-items: center;
@@ -162,7 +181,6 @@ header .top-section .top-wrap .top-block {
   flex-direction: column;
   text-align: center;
   color: #ffffff;
-  margin-bottom: 180px;
 }
 header .top-section .top-wrap .top-block .text-container {
   display: flex;
@@ -172,19 +190,40 @@ header .top-section .top-wrap .top-block .text-container {
   max-width: 1200px;
 }
 header .top-section .top-wrap .top-block .text-container h1 {
-  font-size: 38px;
+  font-size: 28px;
   margin: 0;
+}
+@media (max-width: 425px) {
+  header .top-section .top-wrap .top-block .text-container h1 {
+    font-size: 24px;
+    line-height: 1.3;
+  }
 }
 header .top-section .top-wrap .top-block .text-container p {
   color: #999999;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.5;
+}
+@media (max-width: 425px) {
+  header .top-section .top-wrap .top-block .text-container p {
+    font-size: 14px;
+    line-height: 1.5;
+    max-height: 3em;
+    overflow: hidden;
+    width: 100%;
+  }
 }
 header .top-section .top-wrap .btn-block {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
+}
+@media (max-width: 425px) {
+  header .top-section .top-wrap .btn-block {
+    display: flex;
+    flex-direction: column;
+  }
 }
 header .top-section .top-wrap .btn-block .button {
   background-color: #e50000;
@@ -197,6 +236,8 @@ header .top-section .top-wrap .btn-block .button {
   justify-content: center;
   cursor: pointer;
   text-decoration: none;
+  width: 310px;
+  height: 52px;
 }
 header .top-section .top-wrap .btn-block .mini-btn {
   width: 48px;
@@ -212,6 +253,14 @@ header .top-section .top-wrap .btn-text {
   font-size: 16px;
   color: #ffffff;
 }
+header .top-section .top-block {
+  margin-bottom: 200px;
+}
+@media (max-width: 425px) {
+  header .top-section .top-block {
+    margin-bottom: 30px;
+  }
+}
 
 main {
   /* description */
@@ -223,6 +272,19 @@ main .wrapper {
   flex-direction: row;
   gap: 40px;
   justify-content: center;
+}
+@media (max-width: 1440px) {
+  main .wrapper {
+    width: 90%;
+    justify-content: center;
+    padding-left: 70px;
+  }
+}
+@media (max-width: 425px) {
+  main .wrapper {
+    flex-direction: column;
+    padding: 0;
+  }
 }
 main .wrapper .block-column {
   display: flex;
@@ -253,6 +315,11 @@ main .wrapper .block-column .description .text,
 main .wrapper .block-column .review .text {
   font-size: 18px;
   color: #ffffff;
+}
+@media (max-width: 425px) {
+  main .wrapper .block-column .description {
+    height: 212px;
+  }
 }
 main .wrapper .block-column .cast {
   height: 233px;
@@ -302,6 +369,16 @@ main .wrapper .block-column .cast .photo-grid {
   gap: 25px;
   max-width: 770px;
 }
+@media (max-width: 1440px) {
+  main .wrapper .block-column .cast .photo-grid {
+    gap: 15px;
+  }
+}
+@media (max-width: 425px) {
+  main .wrapper .block-column .cast .photo-grid {
+    overflow: hidden;
+  }
+}
 main .wrapper .block-column .cast .photo-grid img {
   width: 87px;
   height: 89px;
@@ -347,6 +424,11 @@ main .two-blocks {
   justify-content: center;
   margin-top: 30px;
   gap: 8px;
+}
+@media (max-width: 425px) {
+  main .two-blocks .block-hidden {
+    display: none;
+  }
 }
 main .two-blocks .small-block {
   background-color: #0f0f0f;
@@ -405,6 +487,11 @@ main .right-block {
   display: flex;
   flex-direction: column;
   padding: 30px;
+}
+@media (max-width: 425px) {
+  main .right-block {
+    width: 315px;
+  }
 }
 main .right-block .released {
   display: flex;

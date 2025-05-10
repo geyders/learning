@@ -612,9 +612,10 @@ main .toggle-container {
 @media (max-width: 425px) {
   main .toggle-container {
     margin: 10px 0;
+    width: 180px;
   }
 }
-main .toggle-btn {
+main .toggle-container .toggle-btn {
   width: 80px;
   height: 50px;
   border: none;
@@ -624,11 +625,11 @@ main .toggle-btn {
   background-color: #0f0f0f;
   color: #999999;
 }
-main .toggle-btn.active {
+main .toggle-container .toggle-btn.active {
   background-color: #1f1f1f;
   color: white;
 }
-main .toggle-btn:active {
+main .toggle-container .toggle-btn:active {
   transform: translateY(2px);
 }
 main .plans .pricing-grid {

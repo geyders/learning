@@ -1,0 +1,151 @@
+@use '../mixins/mixins' as *;
+
+body {
+    background-color: $main-color;
+    font-family: 'Manrope', sans-serif;
+    color: $white;
+}
+
+
+header {
+    max-width: 1920px;
+    margin: 0 auto;
+
+    .navbar {
+        @include navbar;
+    }
+}
+
+main {
+    .section-header {
+        @include section-header;
+    }
+
+    .toggle-container {
+        @include toggle-btn;
+    }
+
+
+    .plans {
+        @include plans;
+    }
+
+    .table-wrap {
+        @include flex-center;
+        max-width: 1920px;
+        width: 95%;
+        border-radius: 12px;
+        overflow: hidden;
+        border: 1px solid #262626;
+        margin: 40px;
+
+        @media (max-width: $mobile) {
+            display: none;
+        }
+    }
+
+    .table-sub {
+        width: 100%;
+        border-collapse: collapse;
+        color: $white;
+        font-family: sans-serif;
+
+        thead {
+            background-color: $bg-dark;
+            padding: 12px 16px;
+            text-align: left;
+            border: 1px solid #262626;
+
+
+            span {
+                background-color: $accent-color;
+                border-radius: 2px;
+                font-size: 14px;
+            }
+
+        }
+
+        th,
+        td {
+            padding: 12px 16px;
+            text-align: left;
+            border: 1px solid #262626;
+        }
+
+        td {
+            font-size: 16px;
+            color: $text-color;
+        }
+    }
+
+    .plan-container {
+        display: none;
+
+        @media (max-width: $mobile) {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .toggle-container {
+                @include toggle-btn;
+                width: 358px;
+                justify-content: space-between;
+                padding: 10px;
+
+                .plan {
+                    width: 114px;
+                }
+            }
+        }
+    }
+
+    .info {
+        @media (max-width: $mobile) {
+            width: 145px;
+            height: 46;
+
+            p {
+                margin: 5px;
+                font-size: 14px;
+            }
+
+            &-container {
+                width: 358px;
+                height: 486px;
+                background-color: $bg-dark;
+                border: 1px solid #262626;
+                border-radius: 12px;
+                padding: 10px;
+            }
+
+            &-row {
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+            }
+
+            &-title {
+                color: $text-color;
+            }
+
+            &-big {
+                width: 310px;
+                height: 88px;
+
+                p {
+                    margin: 5px;
+                }
+            }
+        }
+    }
+
+    .free-period {
+        @include free-period;
+    }
+}
+
+footer {
+    background-color: $bg-dark;
+
+    @include footer;
+}

@@ -116,95 +116,7 @@ main {
     }
 
     .section-header {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding: 24px 80px 24px 80px;
-        justify-content: space-between;
-
-        @media (max-width: $laptop) {
-            padding: 24px 40px;
-        }
-
-        @media (max-width: $mobile) {
-            padding: 5px;
-            padding: 16px 20px 0 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        h1 {
-            font-size: 18px;
-            margin: 0;
-        }
-
-        p {
-            color: $text-color;
-            font-size: 16px;
-            margin: 0;
-        }
-
-        .text-block {
-            display: flex;
-            flex-direction: column;
-            align-items: start;
-
-            @media (max-width: $mobile) {
-                width: 298px;
-                height: 245px;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-            }
-
-            p {
-                @media (max-width: $mobile) {
-                    font-size: 14px;
-                    line-height: 1.5;
-                    max-height: 3em;
-                    overflow: hidden;
-                    width: 100%;
-                }
-            }
-        }
-
-        .primary-btn {
-            @include primary-btn;
-            margin-left: auto;
-
-            &:active {
-                transform: translateY(2px);
-            }
-        }
-
-        .btn-container {
-            background-color: $bg-dark;
-            border-radius: 12px;
-            padding: 10px 16px;
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            border: 4px solid $border-dark;
-            margin-left: auto;
-
-            @media (max-width: $mobile) {
-                display: none;
-            }
-
-            .icon-btn {
-                border: 1px solid darken($border-dark, 5%);
-                cursor: pointer;
-                background-color: $border-dark;
-                border-radius: 6px;
-                width: 44px;
-                height: 44px;
-
-                &:active {
-                    transform: translateY(2px);
-                }
-            }
-        }
+        @include section-header;
     }
 
 
@@ -362,47 +274,13 @@ main {
         }
     }
 
-   .faq{
-    @include faq-section;
-   }
-
-
-    .toggle {
-        &-container {
-            display: flex;
-            background-color: $bg-dark;
-            border-radius: 10px;
-            border: 1px solid #262626;
-            padding: 5px;
-            width: 180px;
-            margin-left: auto;
-
-            @media (max-width: $mobile) {
-                margin: 10px 0;
-            }
-        }
-
-        &-btn {
-            width: 80px;
-            height: 50px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 14px;
-            background-color: $bg-dark;
-            color: $text-color;
-
-            &.active {
-                background-color: #1f1f1f;
-                color: white;
-            }
-
-            &:active {
-                transform: translateY(2px);
-            }
-        }
+    .faq {
+        @include faq-section;
     }
 
+    .toggle-container {
+        @include toggle-btn;
+    }
 
     .plans {
         @include plans;
