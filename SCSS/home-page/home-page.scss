@@ -125,15 +125,7 @@ main {
     }
 
     .indicator {
-        display: none;
-
-        @media (max-width: $mobile) {
-            width: 100px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 10px;
-        }
+       @include indicator;
     }
 
     .card {

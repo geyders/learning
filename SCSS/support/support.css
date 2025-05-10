@@ -121,6 +121,16 @@ header .navbar .btn-container1 .icon-btn1:active {
     display: none;
   }
 }
+@media (max-width: 1440px) {
+  header .navbar {
+    padding: 24px 40px;
+  }
+}
+@media (max-width: 425px) {
+  header .navbar {
+    padding: 0;
+  }
+}
 
 main .form-block {
   display: flex;
@@ -134,12 +144,19 @@ main .form-block {
   padding: 40px 160px;
   height: 739px;
 }
+@media (max-width: 1440px) {
+  main .form-block {
+    width: 1279px;
+    height: 592px;
+    justify-content: flex-start;
+    padding: 40px;
+  }
+}
 @media (max-width: 425px) {
   main .form-block {
     flex-direction: column;
     padding: 0;
     width: 357px;
-    margin-top: 400px;
   }
 }
 main .left-block {
@@ -150,6 +167,12 @@ main .left-block {
   width: 533px;
   height: 739px;
   align-items: center;
+}
+@media (max-width: 1440px) {
+  main .left-block {
+    width: 429px;
+    height: 592px;
+  }
 }
 @media (max-width: 425px) {
   main .left-block {
@@ -163,6 +186,12 @@ main .left-block .text-block {
   flex-direction: column;
   width: 533px;
   height: 212px;
+}
+@media (max-width: 1440px) {
+  main .left-block .text-block {
+    width: 429px;
+    height: 172px;
+  }
 }
 @media (max-width: 425px) {
   main .left-block .text-block {
@@ -182,6 +211,12 @@ main .left-block .image-block1 {
   background-color: #0f0f0f;
   border-radius: 12px;
   border: 6px solid #262626;
+}
+@media (max-width: 1440px) {
+  main .left-block .image-block1 {
+    width: 429px;
+    height: 380px;
+  }
 }
 @media (max-width: 425px) {
   main .left-block .image-block1 {
@@ -210,6 +245,17 @@ main .right-block {
   max-width: 976px;
   height: 739px;
 }
+@media (max-width: 1440px) {
+  main .right-block {
+    width: 800px;
+    height: 592px;
+  }
+}
+@media (max-width: 425px) {
+  main .right-block {
+    width: 357px;
+  }
+}
 main form {
   background-color: #0f0f0f;
   border: 1px solid #262626;
@@ -221,10 +267,17 @@ main form {
   width: 100%;
   justify-content: space-between;
 }
+@media (max-width: 1440px) {
+  main form {
+    width: 800px;
+    height: 592px;
+  }
+}
 @media (max-width: 425px) {
   main form {
     flex-direction: column;
     height: 766px;
+    width: 357px;
   }
 }
 main form label {
@@ -270,6 +323,12 @@ main .form-wrap {
   gap: 30px;
   width: 976px;
   height: 739px;
+}
+@media (max-width: 1440px) {
+  main .form-wrap {
+    width: 800px;
+    height: 592px;
+  }
 }
 @media (max-width: 425px) {
   main .form-wrap {
@@ -432,6 +491,23 @@ main .section-header .btn-container .icon-btn {
 }
 main .section-header .btn-container .icon-btn:active {
   transform: translateY(2px);
+}
+@media (max-width: 1440px) {
+  main .section-header {
+    margin-top: 1000px;
+    flex-direction: column;
+    gap: 5px;
+    padding: 15px;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 425px) {
+  main .section-header {
+    margin-top: 900px;
+  }
+  main .section-header .primary-btn {
+    margin: 0;
+  }
 }
 main .faq {
   padding: 60px 110px;

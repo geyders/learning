@@ -18,6 +18,14 @@ header {
 
     .navbar {
         @include navbar;
+
+        @media (max-width: $laptop) {
+            padding: 24px 40px;
+        }
+
+        @media (max-width: $mobile) {
+            padding: 0;
+        }
     }
 }
 
@@ -32,11 +40,17 @@ main {
         padding: 40px 160px;
         height: 739px;
 
+        @media (max-width: $laptop) {
+            width: 1279px;
+            height: 592px;
+            justify-content: flex-start;
+            padding: 40px;
+        }
+
         @media (max-width: $mobile) {
             flex-direction: column;
             padding: 0;
             width: 357px;
-            margin-top: 400px;
         }
     }
 
@@ -49,6 +63,11 @@ main {
         height: 739px;
         align-items: center;
 
+        @media (max-width: $laptop) {
+            width: 429px;
+            height: 592px;
+        }
+
         @media (max-width: $mobile) {
             width: 357px;
             height: 510px;
@@ -60,6 +79,11 @@ main {
             flex-direction: column;
             width: 533px;
             height: 212px;
+
+            @media (max-width: $laptop) {
+                width: 429px;
+                height: 172px;
+            }
 
             @media (max-width: $mobile) {
                 width: 357px;
@@ -77,6 +101,11 @@ main {
             background-color: #0f0f0f;
             border-radius: 12px;
             border: 6px solid #262626;
+
+            @media (max-width: $laptop) {
+                width: 429px;
+                height: 380px;
+            }
 
             @media (max-width: $mobile) {
                 width: 357px;
@@ -106,6 +135,15 @@ main {
         flex: 1;
         max-width: 976px;
         height: 739px;
+
+        @media (max-width: $laptop) {
+            width: 800px;
+            height: 592px;
+        }
+
+        @media (max-width: $mobile) {
+            width: 357px;
+        }
     }
 
     form {
@@ -119,9 +157,16 @@ main {
         width: 100%;
         justify-content: space-between;
 
+
+        @media (max-width: $laptop) {
+            width: 800px;
+            height: 592px;
+        }
+
         @media (max-width: $mobile) {
             flex-direction: column;
             height: 766px;
+            width: 357px;
         }
 
         label {
@@ -171,6 +216,11 @@ main {
         gap: 30px;
         width: 976px;
         height: 739px;
+
+        @media (max-width: $laptop) {
+            width: 800px;
+            height: 592px;
+        }
 
         @media (max-width: $mobile) {
             width: 357px;
@@ -230,6 +280,24 @@ main {
     .section-header {
         @include section-header;
         padding: 24px 130px;
+
+        @media (max-width: $laptop) {
+            margin-top: 1000px;
+            flex-direction: column;
+            gap: 5px;
+            padding: 15px;
+            align-items: flex-start;
+        }
+
+        @media (max-width: $mobile){
+            margin-top: 900px;
+
+            .primary-btn {
+                margin: 0;
+            }
+        }
+
+        
     }
 
     .faq {

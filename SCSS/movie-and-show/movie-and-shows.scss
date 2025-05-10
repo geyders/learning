@@ -67,6 +67,18 @@ main {
             padding: 0;
             margin: 0;
             border: none;
+
+            .toggle-container {
+                @include toggle-btn;
+
+                @media (max-width: $mobile) {
+                    width: 358px;
+
+                    .toggle-btn {
+                        width: 171px;
+                    }
+                }
+            }
         }
 
         .movie-btn {
@@ -94,10 +106,20 @@ main {
             padding: 0;
             max-width: 1920px;
             width: 100%;
+
+            @media (max-width: $mobile) {
+                .text-block {
+                    height: 36px;
+                }
+            }
         }
 
         .category-wrapper {
             @include genres-cards;
+
+            .indicator {
+                @include indicator;
+            }
 
             @media (max-width: $mobile) {
                 max-width: 390px;
@@ -105,36 +127,13 @@ main {
                 overflow: hidden;
                 display: flex;
                 flex-direction: column;
-
-                .category-grid {
-                    display: flex;
-                    justify-content: flex-start;
-                }
+                justify-content: flex-start;
+                padding: 0;
 
                 .category-card {
-                    width: 181px;
-                    height: 201px;
+                    width: 201px;
+                    height: 181px;
                 }
-
-                .card-images {
-                    img {
-                        width: 45px;
-                        height: 45px;
-                        object-fit: contain;
-                    }
-                }
-            }
-        }
-
-        .indicator {
-            display: none;
-
-            @media (max-width: $mobile) {
-                width: 100px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin: 10px;
             }
         }
 
@@ -243,7 +242,7 @@ main {
                     @media (max-width: $mobile) {
                         width: 60px;
                         height: 60px;
-                        object-fit: contain;
+                        object-fit: cover;
                     }
                 }
             }
@@ -330,6 +329,10 @@ main {
 
     .free-period {
         @include free-period;
+    }
+
+    .toggle-container {
+        display: none;
     }
 }
 
