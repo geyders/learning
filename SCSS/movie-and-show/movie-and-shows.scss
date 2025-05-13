@@ -4,6 +4,10 @@ body {
     background-color: $main-color;
     font-family: 'Manrope', sans-serif;
     color: $white;
+
+    @media (max-width: $mobile) {
+        width: 390px;
+    }
 }
 
 
@@ -14,11 +18,13 @@ header {
 
     .navbar {
         @include navbar;
+        padding: 24px 140px;
     }
 
 
     .top-section {
         @include top-section;
+        max-width: 1770px;
     }
 
     .bottom-block {
@@ -50,32 +56,34 @@ main {
         position: relative;
         display: flex;
         flex-direction: column;
-        margin: 80px;
+        margin: 80px 160px;
         padding: 0 60px;
         border: 2px solid #262626;
         border-radius: 12px;
         height: auto;
-        max-width: 1750px;
+        max-width: 1598px;
+        align-items: center;
         width: 100%;
         box-sizing: border-box;
 
         @media (max-width: $laptop) {
-            width: 90%;
+            width: 80%;
         }
 
         @media (max-width: $mobile) {
             padding: 0;
             margin: 0;
             border: none;
+            width: 390px;
 
             .toggle-container {
                 @include toggle-btn;
 
                 @media (max-width: $mobile) {
-                    width: 358px;
+                    width: 370px;
 
                     .toggle-btn {
-                        width: 171px;
+                        width: 191px;
                     }
                 }
             }
@@ -117,6 +125,19 @@ main {
         .category-wrapper {
             @include genres-cards;
 
+            .category-grid {
+                padding: 0;
+            }
+
+            .category-card {
+                width: 215px;
+
+                @media (max-width: $laptop) {
+                    width: 123px;
+                    height: 176px;
+                }
+            }
+
             .indicator {
                 @include indicator;
             }
@@ -129,22 +150,25 @@ main {
                 flex-direction: column;
                 justify-content: flex-start;
                 padding: 0;
-
-                .category-card {
-                    width: 201px;
-                    height: 181px;
-                }
             }
         }
 
         .section-four {
             @include card;
-            width: 330px;
+            width: 290px;
             height: 378px;
 
             @media (max-width: $laptop) {
-                width: 210px;
-                height: 240px;
+                width: 175px;
+                height: 260px;
+            }
+
+            @media (max-width: $mobile) {
+                width: 231px;
+                height: 268px;
+                padding: 20px;
+                margin: 0 auto;
+                overflow: hidden;
             }
         }
 
@@ -154,12 +178,12 @@ main {
             mask-image: linear-gradient(to bottom, transparent 0%, black 0%, black 35%, transparent 100%);
 
             img {
-                width: 160px;
+                width: 140px;
                 height: 140px;
 
                 @media (max-width: $laptop) {
-                    width: 100px;
-                    height: 90px;
+                    width: 83px;
+                    height: 94px;
                 }
             }
         }
@@ -170,12 +194,14 @@ main {
 
         .must-watches {
             @include card;
-            width: 360px;
-            height: 500px;
+            width: 290px;
+            height: 470px;
+
+
 
             @media (max-width: $laptop) {
-                width: 235px;
-                height: 350px;
+                width: 195px;
+                height: 295px;
                 padding: 20px;
             }
         }
@@ -191,11 +217,48 @@ main {
                 @include statistic;
                 width: 108px;
 
+                @media (max-width: $laptop) {
+                    width: 85px;
+                    height: 30px;
+                }
+
+                img {
+                    @media (max-width: $laptop) {
+                        width: 15px;
+                        height: 15px;
+                    }
+                }
+
+                p {
+                    @media (max-width: $laptop) {
+                        margin: 0;
+                        font-size: 12px;
+                    }
+                }
             }
 
             .watches {
                 @include statistic;
                 width: 64px;
+
+                @media (max-width: $laptop) {
+                    width: 50px;
+                    height: 30px;
+                }
+
+                img {
+                    @media (max-width: $laptop) {
+                        width: 15px;
+                        height: 15px;
+                    }
+                }
+
+                p {
+                    @media (max-width: $laptop) {
+                        margin: 0;
+                        font-size: 12px;
+                    }
+                }
             }
 
             .stars {
@@ -211,12 +274,12 @@ main {
 
         .shows-card {
             @include card;
-            width: 359px;
-            height: 444px;
+            width: 290px;
+            height: 370px;
 
             @media (max-width: $laptop) {
-                width: 235px;
-                height: 350px;
+                width: 195px;
+                height: 313px;
                 padding: 20px;
             }
         }
@@ -229,19 +292,19 @@ main {
                 mask-image: linear-gradient(to bottom, transparent 0%, black 0%, black 35%, transparent 100%);
 
                 img {
-                    height: 132px;
-                    width: 120px;
+                    height: 125px;
+                    width: 100px;
                     object-fit: cover;
                     border-radius: 8px;
 
                     @media (max-width: $laptop) {
-                        width: 74px;
-                        height: 80px;
+                        width: 59px;
+                        height: 63px;
                     }
 
                     @media (max-width: $mobile) {
-                        width: 60px;
-                        height: 60px;
+                        width: 68px;
+                        height: 68px;
                         object-fit: cover;
                     }
                 }
@@ -301,34 +364,67 @@ main {
 
     .trending-card {
         @include card;
+        width: 215px;
+        height: 340px;
+        display: flex;
+        flex-direction: column;
 
-        @media(max-width: $laptop) {
-            height: 280px;
-            width: 175px;
-            padding: 20px;
-        }
-    }
-
-    .card-image {
-        @media(max-width: $laptop) {
+        .one-img {
             img {
-                width: 175px;
-                height: 200px;
+                width: 220px;
+
+                @media (max-width: $laptop) {
+                    width: 148px;
+                    height: 200px;
+                }
             }
         }
+
+        @media(max-width: $laptop) {
+            height: 269px;
+            width: 145px;
+            padding: 20px;
+        }
+
+        @media (max-width: $mobile) {
+            width: 189px;
+            height: 259px;
+        }
     }
 
+    // .card-image {
+    //     @media(max-width: $laptop) {
+    //         img {
+    //             width: 197px;
+    //             height: 200px;
+    //         }
+    //     }
+    // }
+
     .big-img {
-        @media (max-width: $laptop) {
-            img {
-                width: 240px;
-                height: 280px
+        img {
+            width: 290px;
+
+            @media (max-width: $laptop) {
+                width: 197px;
+                height: 232px
             }
         }
     }
 
     .free-period {
         @include free-period;
+
+        .section-free {
+            @media (max-width: $laptop) {
+                padding: 50px 100px 50px 135px;
+                width: 1183px;
+            }
+        }
+
+        .text-wrap{
+            max-width: 970px;
+        }
     }
 
     .toggle-container {

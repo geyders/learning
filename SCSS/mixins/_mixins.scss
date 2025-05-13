@@ -4,6 +4,7 @@ $border-dark: #1a1a1a;
 $text-color: #999999;
 $white: #ffffff;
 $accent-color: #e50000;
+$btn-hover-color: #d02525;
 $mobile: 425px;
 $laptop: 1440px;
 
@@ -76,6 +77,8 @@ $laptop: 1440px;
         @media (max-width: $mobile) {
             display: none;
         }
+
+
     }
 
     .nav-link {
@@ -87,6 +90,10 @@ $laptop: 1440px;
         @include flex-center;
         border-radius: 8px;
         transition: background-color 0.2s ease;
+
+        &:hover {
+            transform: scale(1.05);
+        }
 
         &.active,
         &:active {
@@ -106,6 +113,10 @@ $laptop: 1440px;
 
             &:active {
                 transform: translateY(2px);
+            }
+
+            &:hover {
+                transform: scale(1.05);
             }
         }
 
@@ -141,8 +152,16 @@ $laptop: 1440px;
     color: $white;
     font-size: 16px;
     cursor: pointer;
-    transition: background 0.4s ease, box-shadow 0.4s ease;
+
+
+    &:hover {
+        transform: translateY(-0.25em);
+        box-shadow: 0 0 1em 0em $btn-hover-color;
+        border-color: $btn-hover-color;
+    }
 }
+
+
 
 @mixin red-btn {
     background-color: $accent-color;
@@ -185,7 +204,8 @@ $laptop: 1440px;
         overflow: hidden;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
+        justify-content: flex-start;
     }
 
 
@@ -194,38 +214,60 @@ $laptop: 1440px;
         @include flex-center;
         gap: 15px;
         margin-bottom: 40px;
-        max-width: 1920px;
-    }
+        max-width: 1596px;
+        padding-left: 150px;
 
-    @media (max-width: $mobile) {
-        .category-grid {
+        @media (max-width: $laptop) {
+            padding: 0;
+        }
+
+        @media (max-width: $mobile) {
             gap: 10px;
             padding: 0;
             margin-bottom: 5px;
-        }
+            justify-content: flex-start;
 
-        .category-grid .hidden {
-            display: none;
+            .hidden {
+                display: none;
+            }
         }
     }
+
+    // @media (max-width: $mobile) {
+    //     .category-grid {
+    //         gap: 10px;
+    //         padding: 0;
+    //         margin-bottom: 5px;
+    //     }
+
+    //     .category-grid .hidden {
+    //         display: none;
+    //     }
+    // }
 
 
 
     .category-card {
         @include card;
-        max-width: 270px;
-        max-height: 342px;
+        width: 270px;
+        height: 342px;
+
+        &:hover {
+            transform: translateY(-0.5em);
+        }
 
         @media (max-width: $laptop) {
             width: 190px;
-            height: 220px;
+            height: 240px;
         }
 
         @media (max-width: $mobile) {
-            width: 100%;
-            max-width: 140px;
+            width: 140px;
+            height: 201px;
             padding: 20px;
             margin: 0 auto;
+            overflow: hidden;
+            justify-content: flex-start;
         }
     }
 
@@ -252,8 +294,7 @@ $laptop: 1440px;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
             justify-content: center;
-            padding: 60px 80px 60px 80px;
-            max-width: 1920px;
+            max-width: 1596px;
             margin: 0 auto;
 
             @media (max-width:$laptop) {
@@ -273,8 +314,13 @@ $laptop: 1440px;
             flex-direction: column;
             justify-content: space-evenly;
             border: 2px solid #262626;
-            width: 512px;
+            width: 475px;
             height: 425px;
+
+            &:hover {
+                transform: scale(1.05);
+                box-shadow: 0 0 20px rgba(229, 0, 0, 0.2);
+            }
 
             @media (max-width: $laptop) {
                 width: 390px;
@@ -396,9 +442,10 @@ $laptop: 1440px;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(4, auto);
-        gap: 15px;
-        padding: 60px 80px 0px 80px;
+        gap: 20px;
+        padding: 60px 80px 0px 150px;
         margin-top: 40px;
+        max-width: 1596px;
 
         @media (max-width: $laptop) {
             padding: 20px;
@@ -430,6 +477,11 @@ $laptop: 1440px;
             height: 2px;
             background: $accent-color;
             mask-image: linear-gradient(to right, transparent, black 30%, black 70%, transparent);
+        }
+
+
+        &:hover {
+            transform: scale(1.05);
         }
     }
 
@@ -772,8 +824,9 @@ $laptop: 1440px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 24px 80px 24px 80px;
+    padding: 24px 80px 24px 160px;
     justify-content: space-between;
+    max-width: 1596px;
 
     @media (max-width: $laptop) {
         padding: 24px 40px;
@@ -781,10 +834,10 @@ $laptop: 1440px;
 
     @media (max-width: $mobile) {
         padding: 5px;
-        padding: 16px 20px 0 20px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        width: 390px;
     }
 
     h1 {
@@ -804,8 +857,8 @@ $laptop: 1440px;
         align-items: start;
 
         @media (max-width: $mobile) {
-            width: 298px;
-            height: 245px;
+            width: 370px;
+            height: 200px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -828,7 +881,10 @@ $laptop: 1440px;
 
         &:active {
             transform: translateY(2px);
+
         }
+
+
     }
 
     .btn-container {
@@ -855,6 +911,10 @@ $laptop: 1440px;
 
             &:active {
                 transform: translateY(2px);
+            }
+
+            &:hover {
+                background-color: $accent-color;
             }
         }
     }
@@ -885,6 +945,10 @@ $laptop: 1440px;
         background-color: $bg-dark;
         color: $text-color;
 
+        &:hover {
+            transform: scale(1.05);
+        }
+
         &.active {
             background-color: #1f1f1f;
             color: white;
@@ -911,8 +975,12 @@ $laptop: 1440px;
     padding: 0 80px;
     box-sizing: border-box;
 
+    @media (max-width: $laptop) {
+        width: 1280px;
+    }
+
     @media (max-width: $mobile) {
-        width: 358px;
+        width: 390px;
         height: 468px;
         margin: 0 auto;
         padding: 0 16px;
@@ -1050,12 +1118,13 @@ $laptop: 1440px;
         max-width: 1920px;
 
         @media(max-width: $laptop) {
-            padding: 80px 40px;
+            padding: 50px;
+            width: 1350px;
         }
 
         @media (max-width: $mobile) {
             width: 100%;
-            max-width: 358px;
+            max-width: 390px;
             height: 344px;
             padding: 0;
             margin-bottom: 30px;
@@ -1065,10 +1134,13 @@ $laptop: 1440px;
     .free {
         &-block {
             position: relative;
-            height: auto;
+            height: 344px;
             width: 100%;
-            max-width: 1920px;
+            max-width: 1596px;
             grid-area: 1 / 1;
+            overflow: hidden;
+            border-radius: 12px;
+            border: 1px solid #262626;
 
             @media(max-width: $laptop) {
                 width: 97%;
@@ -1088,7 +1160,12 @@ $laptop: 1440px;
                 position: absolute;
                 width: 100%;
                 inset: 0;
-                background: linear-gradient(to left, rgba(229, 0, 0, 0.5) 10%, rgb(30, 30, 30) 100%, rgb(5, 3, 3) 80%, transparent 100%);
+                background: linear-gradient(to left,
+                        rgba(229, 0, 0, 0.4) 0%,
+                        rgba(34, 14, 14, 1) 91%,
+                        rgba(20, 15, 15, 1) 97%,
+                        rgba(15, 15, 15, 1) 100%,
+                        rgba(0, 0, 0, 0.9) 100%);
                 z-index: 1;
 
                 @media (max-width: $mobile) {
@@ -1109,9 +1186,10 @@ $laptop: 1440px;
         }
 
         &-img {
-            height: 90px;
+            height: 83px;
             width: 195px;
             object-fit: cover;
+
 
             @media (max-width: $laptop) {
                 width: 141px;
@@ -1125,6 +1203,13 @@ $laptop: 1440px;
                 width: 100px;
             }
         }
+
+    }
+
+    .gallery-row {
+        display: flex;
+        gap: 20px;
+        padding: 20px;
 
     }
 
@@ -1185,6 +1270,10 @@ $laptop: 1440px;
 
 // footer
 @mixin footer {
+    @media (max-width: $laptop) {
+        width: 1440px;
+    }
+
     .footer {
         padding: 10px;
         max-width: 100%;
@@ -1192,10 +1281,14 @@ $laptop: 1440px;
         &-grid {
             display: grid;
             grid-template-columns: repeat(6, 1fr);
-            gap: 16px;
-            max-width: 1920px;
+            gap: 60px;
+            max-width: 1596px;
             width: 100%;
-
+            margin: 0 auto;
+@media (max-width: $laptop){
+    gap: 56px;
+    max-width: 1167px;
+}
             @media (max-width: $mobile) {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
@@ -1211,6 +1304,11 @@ $laptop: 1440px;
             justify-content: flex-start;
             gap: 10px;
             font-size: 13px;
+            width: 190px;
+
+            @media (max-width: $laptop) {
+                width: 125px;
+            }
 
             @media (max-width: $mobile) {
                 font-size: 12px;
@@ -1258,7 +1356,10 @@ $laptop: 1440px;
             margin-top: 30px;
             color: $text-color;
             font-size: 14px;
-
+@media (max-width: $laptop) {
+    width: 78%;
+    margin: 0 auto;
+}
             @media (max-width: $mobile) {
                 flex-direction: column;
                 align-items: flex-start;

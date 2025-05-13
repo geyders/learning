@@ -95,6 +95,9 @@ header .navbar .nav-link {
   border-radius: 8px;
   transition: background-color 0.2s ease;
 }
+header .navbar .nav-link:hover {
+  transform: scale(1.05);
+}
 header .navbar .nav-link.active, header .navbar .nav-link:active {
   background-color: #1a1a1a;
   color: #ffffff;
@@ -110,6 +113,9 @@ header .navbar .btn-container1 .icon-btn1 {
 }
 header .navbar .btn-container1 .icon-btn1:active {
   transform: translateY(2px);
+}
+header .navbar .btn-container1 .icon-btn1:hover {
+  transform: scale(1.05);
 }
 @media (max-width: 425px) {
   header .navbar .btn-container1 {
@@ -130,9 +136,14 @@ header .top-section {
   padding: 0 80px;
   box-sizing: border-box;
 }
+@media (max-width: 1440px) {
+  header .top-section {
+    width: 1280px;
+  }
+}
 @media (max-width: 425px) {
   header .top-section {
-    width: 358px;
+    width: 390px;
     height: 468px;
     margin: 0 auto;
     padding: 0 16px;
@@ -595,13 +606,14 @@ main .free-period .section-free {
 }
 @media (max-width: 1440px) {
   main .free-period .section-free {
-    padding: 80px 40px;
+    padding: 50px;
+    width: 1350px;
   }
 }
 @media (max-width: 425px) {
   main .free-period .section-free {
     width: 100%;
-    max-width: 358px;
+    max-width: 390px;
     height: 344px;
     padding: 0;
     margin-bottom: 30px;
@@ -609,10 +621,13 @@ main .free-period .section-free {
 }
 main .free-period .free-block {
   position: relative;
-  height: auto;
+  height: 344px;
   width: 100%;
-  max-width: 1920px;
+  max-width: 1596px;
   grid-area: 1/1;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid #262626;
 }
 @media (max-width: 1440px) {
   main .free-period .free-block {
@@ -634,7 +649,7 @@ main .free-period .free-block::after {
   position: absolute;
   width: 100%;
   inset: 0;
-  background: linear-gradient(to left, rgba(229, 0, 0, 0.5) 10%, rgb(30, 30, 30) 100%, rgb(5, 3, 3) 80%, transparent 100%);
+  background: linear-gradient(to left, rgba(229, 0, 0, 0.4) 0%, rgb(34, 14, 14) 91%, rgb(20, 15, 15) 97%, rgb(15, 15, 15) 100%, rgba(0, 0, 0, 0.9) 100%);
   z-index: 1;
 }
 @media (max-width: 425px) {
@@ -653,7 +668,7 @@ main .free-period .free-block::after {
   }
 }
 main .free-period .free-img {
-  height: 90px;
+  height: 83px;
   width: 195px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -671,6 +686,11 @@ main .free-period .free-img {
     height: 150px;
     width: 100px;
   }
+}
+main .free-period .gallery-row {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
 }
 main .free-period .text-wrap {
   position: absolute;
@@ -711,7 +731,11 @@ main .free-period .text-wrap .primary-btn {
   color: #ffffff;
   font-size: 16px;
   cursor: pointer;
-  transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+main .free-period .text-wrap .primary-btn:hover {
+  transform: translateY(-0.25em);
+  box-shadow: 0 0 1em 0em #d02525;
+  border-color: #d02525;
 }
 main .free-period .text-wrap .primary-btn:active {
   transform: translateY(2px);
@@ -738,6 +762,11 @@ main .free-period .text-block p {
 footer {
   background-color: #0f0f0f;
 }
+@media (max-width: 1440px) {
+  footer {
+    width: 1440px;
+  }
+}
 footer .footer {
   padding: 10px;
   max-width: 100%;
@@ -745,9 +774,16 @@ footer .footer {
 footer .footer-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: 16px;
-  max-width: 1920px;
+  gap: 60px;
+  max-width: 1596px;
   width: 100%;
+  margin: 0 auto;
+}
+@media (max-width: 1440px) {
+  footer .footer-grid {
+    gap: 56px;
+    max-width: 1167px;
+  }
 }
 @media (max-width: 425px) {
   footer .footer-grid {
@@ -764,6 +800,12 @@ footer .footer-column {
   justify-content: flex-start;
   gap: 10px;
   font-size: 13px;
+  width: 190px;
+}
+@media (max-width: 1440px) {
+  footer .footer-column {
+    width: 125px;
+  }
 }
 @media (max-width: 425px) {
   footer .footer-column {
@@ -810,6 +852,12 @@ footer .footer-bottom {
   margin-top: 30px;
   color: #999999;
   font-size: 14px;
+}
+@media (max-width: 1440px) {
+  footer .footer-bottom {
+    width: 78%;
+    margin: 0 auto;
+  }
 }
 @media (max-width: 425px) {
   footer .footer-bottom {

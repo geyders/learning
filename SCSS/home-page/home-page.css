@@ -2,6 +2,8 @@ body {
   background-color: #1e1e1e;
   font-family: "Manrope", sans-serif;
   color: #ffffff;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
@@ -98,6 +100,9 @@ header .navbar .nav-link {
   border-radius: 8px;
   transition: background-color 0.2s ease;
 }
+header .navbar .nav-link:hover {
+  transform: scale(1.05);
+}
 header .navbar .nav-link.active, header .navbar .nav-link:active {
   background-color: #1a1a1a;
   color: #ffffff;
@@ -113,6 +118,9 @@ header .navbar .btn-container1 .icon-btn1 {
 }
 header .navbar .btn-container1 .icon-btn1:active {
   transform: translateY(2px);
+}
+header .navbar .btn-container1 .icon-btn1:hover {
+  transform: scale(1.05);
 }
 @media (max-width: 425px) {
   header .navbar .btn-container1 {
@@ -219,7 +227,11 @@ main .hero-section .primary-btn {
   color: #ffffff;
   font-size: 16px;
   cursor: pointer;
-  transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+main .hero-section .primary-btn:hover {
+  transform: translateY(-0.25em);
+  box-shadow: 0 0 1em 0em #d02525;
+  border-color: #d02525;
 }
 main .hero-section .primary-btn:active {
   transform: translateY(2px);
@@ -228,8 +240,9 @@ main .section-header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 24px 80px 24px 80px;
+  padding: 24px 80px 24px 160px;
   justify-content: space-between;
+  max-width: 1596px;
 }
 @media (max-width: 1440px) {
   main .section-header {
@@ -239,10 +252,10 @@ main .section-header {
 @media (max-width: 425px) {
   main .section-header {
     padding: 5px;
-    padding: 16px 20px 0 20px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    width: 390px;
   }
 }
 main .section-header h1 {
@@ -261,8 +274,8 @@ main .section-header .text-block {
 }
 @media (max-width: 425px) {
   main .section-header .text-block {
-    width: 298px;
-    height: 245px;
+    width: 370px;
+    height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -292,8 +305,12 @@ main .section-header .primary-btn {
   color: #ffffff;
   font-size: 16px;
   cursor: pointer;
-  transition: background 0.4s ease, box-shadow 0.4s ease;
   margin-left: auto;
+}
+main .section-header .primary-btn:hover {
+  transform: translateY(-0.25em);
+  box-shadow: 0 0 1em 0em #d02525;
+  border-color: #d02525;
 }
 main .section-header .primary-btn:active {
   transform: translateY(2px);
@@ -324,13 +341,17 @@ main .section-header .btn-container .icon-btn {
 main .section-header .btn-container .icon-btn:active {
   transform: translateY(2px);
 }
+main .section-header .btn-container .icon-btn:hover {
+  background-color: #e50000;
+}
 @media (max-width: 425px) {
   main .category-wrapper {
     width: 100%;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
 }
 main .category-wrapper .category-grid {
@@ -339,13 +360,20 @@ main .category-wrapper .category-grid {
   justify-content: center;
   gap: 15px;
   margin-bottom: 40px;
-  max-width: 1920px;
+  max-width: 1596px;
+  padding-left: 150px;
+}
+@media (max-width: 1440px) {
+  main .category-wrapper .category-grid {
+    padding: 0;
+  }
 }
 @media (max-width: 425px) {
   main .category-wrapper .category-grid {
     gap: 10px;
     padding: 0;
     margin-bottom: 5px;
+    justify-content: flex-start;
   }
   main .category-wrapper .category-grid .hidden {
     display: none;
@@ -356,21 +384,26 @@ main .category-wrapper .category-card {
   border-radius: 12px;
   padding: 30px;
   border: 4px solid #262626;
-  max-width: 270px;
-  max-height: 342px;
+  width: 270px;
+  height: 342px;
+}
+main .category-wrapper .category-card:hover {
+  transform: translateY(-0.5em);
 }
 @media (max-width: 1440px) {
   main .category-wrapper .category-card {
     width: 190px;
-    height: 220px;
+    height: 240px;
   }
 }
 @media (max-width: 425px) {
   main .category-wrapper .category-card {
-    width: 100%;
-    max-width: 140px;
+    width: 140px;
+    height: 201px;
     padding: 20px;
     margin: 0 auto;
+    overflow: hidden;
+    justify-content: flex-start;
   }
 }
 main .indicator {
@@ -397,7 +430,7 @@ main .card-images {
 }
 main .card-images img {
   height: 123px;
-  width: 130px;
+  width: 110px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 8px;
@@ -434,7 +467,8 @@ main .device-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  padding: 60px 80px 0px 80px;
+  padding: 60px 80px 0px 150px;
+  max-width: 1596px;
 }
 @media (max-width: 1440px) {
   main .device-grid {
@@ -443,7 +477,6 @@ main .device-grid {
 }
 @media (max-width: 425px) {
   main .device-grid {
-    display: grid;
     grid-template-columns: 1fr;
     padding: 30px 0;
     gap: 15px;
@@ -452,14 +485,20 @@ main .device-grid {
 main .device-card {
   display: flex;
   flex-direction: column;
+  position: relative;
   gap: 30px;
-  width: 512px;
+  width: 480px;
   height: 283px;
   border-radius: 12px;
   padding: 20px;
   border: 1px solid #262626;
   background: linear-gradient(225deg, rgba(229, 0, 0, 0.2) 0%, rgba(15, 15, 15, 0.3) 30%);
-  transition: background 0.4s ease;
+  transition: background 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+}
+main .device-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(229, 0, 0, 0.2);
+  background: linear-gradient(35deg, rgba(229, 0, 0, 0.2) 10%, rgba(15, 15, 15, 0.3) 95%);
 }
 main .device-card h3 {
   font-size: 23px;
@@ -488,7 +527,7 @@ main .device-card p {
 }
 @media (max-width: 425px) {
   main .device-card {
-    width: 361px;
+    width: 330px;
     height: 175px;
   }
 }
@@ -528,9 +567,10 @@ main .faq-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(4, auto);
-  gap: 15px;
-  padding: 60px 80px 0px 80px;
+  gap: 20px;
+  padding: 60px 80px 0px 150px;
   margin-top: 40px;
+  max-width: 1596px;
 }
 @media (max-width: 1440px) {
   main .faq-grid {
@@ -564,6 +604,9 @@ main .faq-item::after {
   background: #e50000;
   -webkit-mask-image: linear-gradient(to right, transparent, black 30%, black 70%, transparent);
           mask-image: linear-gradient(to right, transparent, black 30%, black 70%, transparent);
+}
+main .faq-item:hover {
+  transform: scale(1.05);
 }
 main .faq-active {
   display: flex;
@@ -623,6 +666,9 @@ main .toggle-container .toggle-btn {
   background-color: #0f0f0f;
   color: #999999;
 }
+main .toggle-container .toggle-btn:hover {
+  transform: scale(1.05);
+}
 main .toggle-container .toggle-btn.active {
   background-color: #1f1f1f;
   color: white;
@@ -635,8 +681,7 @@ main .plans .pricing-grid {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
   justify-content: center;
-  padding: 60px 80px 60px 80px;
-  max-width: 1920px;
+  max-width: 1596px;
   margin: 0 auto;
 }
 @media (max-width: 1440px) {
@@ -657,8 +702,12 @@ main .plans .pricing-card {
   flex-direction: column;
   justify-content: space-evenly;
   border: 2px solid #262626;
-  width: 512px;
+  width: 475px;
   height: 425px;
+}
+main .plans .pricing-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(229, 0, 0, 0.2);
 }
 @media (max-width: 1440px) {
   main .plans .pricing-card {
@@ -730,13 +779,14 @@ main .free-period .section-free {
 }
 @media (max-width: 1440px) {
   main .free-period .section-free {
-    padding: 80px 40px;
+    padding: 50px;
+    width: 1350px;
   }
 }
 @media (max-width: 425px) {
   main .free-period .section-free {
     width: 100%;
-    max-width: 358px;
+    max-width: 390px;
     height: 344px;
     padding: 0;
     margin-bottom: 30px;
@@ -744,10 +794,13 @@ main .free-period .section-free {
 }
 main .free-period .free-block {
   position: relative;
-  height: auto;
+  height: 344px;
   width: 100%;
-  max-width: 1920px;
+  max-width: 1596px;
   grid-area: 1/1;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid #262626;
 }
 @media (max-width: 1440px) {
   main .free-period .free-block {
@@ -769,7 +822,7 @@ main .free-period .free-block::after {
   position: absolute;
   width: 100%;
   inset: 0;
-  background: linear-gradient(to left, rgba(229, 0, 0, 0.5) 10%, rgb(30, 30, 30) 100%, rgb(5, 3, 3) 80%, transparent 100%);
+  background: linear-gradient(to left, rgba(229, 0, 0, 0.4) 0%, rgb(34, 14, 14) 91%, rgb(20, 15, 15) 97%, rgb(15, 15, 15) 100%, rgba(0, 0, 0, 0.9) 100%);
   z-index: 1;
 }
 @media (max-width: 425px) {
@@ -788,7 +841,7 @@ main .free-period .free-block::after {
   }
 }
 main .free-period .free-img {
-  height: 90px;
+  height: 83px;
   width: 195px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -806,6 +859,11 @@ main .free-period .free-img {
     height: 150px;
     width: 100px;
   }
+}
+main .free-period .gallery-row {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
 }
 main .free-period .text-wrap {
   position: absolute;
@@ -846,7 +904,11 @@ main .free-period .text-wrap .primary-btn {
   color: #ffffff;
   font-size: 16px;
   cursor: pointer;
-  transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+main .free-period .text-wrap .primary-btn:hover {
+  transform: translateY(-0.25em);
+  box-shadow: 0 0 1em 0em #d02525;
+  border-color: #d02525;
 }
 main .free-period .text-wrap .primary-btn:active {
   transform: translateY(2px);
@@ -873,6 +935,11 @@ main .free-period .text-block p {
 footer {
   background-color: #0f0f0f;
 }
+@media (max-width: 1440px) {
+  footer {
+    width: 1440px;
+  }
+}
 footer .footer {
   padding: 10px;
   max-width: 100%;
@@ -880,9 +947,16 @@ footer .footer {
 footer .footer-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: 16px;
-  max-width: 1920px;
+  gap: 60px;
+  max-width: 1596px;
   width: 100%;
+  margin: 0 auto;
+}
+@media (max-width: 1440px) {
+  footer .footer-grid {
+    gap: 56px;
+    max-width: 1167px;
+  }
 }
 @media (max-width: 425px) {
   footer .footer-grid {
@@ -899,6 +973,12 @@ footer .footer-column {
   justify-content: flex-start;
   gap: 10px;
   font-size: 13px;
+  width: 190px;
+}
+@media (max-width: 1440px) {
+  footer .footer-column {
+    width: 125px;
+  }
 }
 @media (max-width: 425px) {
   footer .footer-column {
@@ -945,6 +1025,12 @@ footer .footer-bottom {
   margin-top: 30px;
   color: #999999;
   font-size: 14px;
+}
+@media (max-width: 1440px) {
+  footer .footer-bottom {
+    width: 78%;
+    margin: 0 auto;
+  }
 }
 @media (max-width: 425px) {
   footer .footer-bottom {
