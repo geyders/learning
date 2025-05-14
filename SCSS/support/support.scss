@@ -20,7 +20,7 @@ header {
         @include navbar;
 
         @media (max-width: $laptop) {
-            padding: 24px 40px;
+            padding: 24px 60px;
         }
 
         @media (max-width: $mobile) {
@@ -41,10 +41,10 @@ main {
         height: 739px;
 
         @media (max-width: $laptop) {
-            width: 1279px;
+            width: 1097px;
             height: 592px;
             justify-content: flex-start;
-            padding: 40px;
+            padding: 83px;
         }
 
         @media (max-width: $mobile) {
@@ -64,7 +64,7 @@ main {
         align-items: center;
 
         @media (max-width: $laptop) {
-            width: 429px;
+            width: 391px;
             height: 592px;
         }
 
@@ -159,7 +159,7 @@ main {
 
 
         @media (max-width: $laptop) {
-            width: 800px;
+            width: 768px;
             height: 592px;
         }
 
@@ -281,12 +281,6 @@ main {
         @include section-header;
         padding: 24px 130px;
 
-        @media (max-width: $laptop) {
-            flex-direction: column;
-            gap: 5px;
-            padding: 15px;
-            align-items: flex-start;
-        }
 
         @media (max-width: $mobile){
             margin-top: 900px;

@@ -448,7 +448,7 @@ $laptop: 1440px;
         max-width: 1596px;
 
         @media (max-width: $laptop) {
-            padding: 20px;
+            padding: 40px;
         }
 
         @media (max-width: $mobile) {
@@ -538,7 +538,7 @@ $laptop: 1440px;
 
     @media (max-width: $mobile) {
         flex-direction: column;
-        padding: 0;
+        padding: 24px;
     }
 
     .block-column {
@@ -715,7 +715,7 @@ $laptop: 1440px;
     padding: 30px;
 
     @media (max-width: $mobile) {
-        width: 315px;
+      width: 278px;
     }
 
     .released {
@@ -829,7 +829,7 @@ $laptop: 1440px;
     max-width: 1596px;
 
     @media (max-width: $laptop) {
-        padding: 24px 40px;
+        padding: 24px 66px;
     }
 
     @media (max-width: $mobile) {
@@ -931,7 +931,6 @@ $laptop: 1440px;
 
     @media (max-width: $mobile) {
         margin: 10px 0;
-        width: 180px;
     }
 
 
@@ -1274,6 +1273,10 @@ $laptop: 1440px;
         width: 1440px;
     }
 
+    @media (max-width: $mobile) {
+        width: 390px;
+    }
+
     .footer {
         padding: 10px;
         max-width: 100%;
@@ -1285,10 +1288,12 @@ $laptop: 1440px;
             max-width: 1596px;
             width: 100%;
             margin: 0 auto;
-@media (max-width: $laptop){
-    gap: 56px;
-    max-width: 1167px;
-}
+
+            @media (max-width: $laptop) {
+                gap: 20px;
+                max-width: 1347px;
+            }
+
             @media (max-width: $mobile) {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
@@ -1307,10 +1312,12 @@ $laptop: 1440px;
             width: 190px;
 
             @media (max-width: $laptop) {
-                width: 125px;
+                width: 187px;
             }
 
             @media (max-width: $mobile) {
+                width: 155px;
+
                 font-size: 12px;
                 gap: 5px;
             }
@@ -1328,7 +1335,7 @@ $laptop: 1440px;
         }
 
         &-link {
-            padding: 10px 16px;
+            padding: 0 16px;
             background-color: $bg-dark;
             color: white;
             border: none;
@@ -1349,17 +1356,19 @@ $laptop: 1440px;
         }
 
         &-bottom {
-            width: 100%;
+            width: 82%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-top: 30px;
+            margin: 0 auto;
             color: $text-color;
             font-size: 14px;
-@media (max-width: $laptop) {
-    width: 78%;
-    margin: 0 auto;
-}
+
+            @media (max-width: $laptop) {
+                width: 90%;
+                margin: 0 auto;
+            }
+
             @media (max-width: $mobile) {
                 flex-direction: column;
                 align-items: flex-start;

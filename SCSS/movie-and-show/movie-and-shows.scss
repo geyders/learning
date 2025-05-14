@@ -158,6 +158,10 @@ main {
             width: 290px;
             height: 378px;
 
+            &:hover {
+                transform: translateY(-0.5em);
+            }
+
             @media (max-width: $laptop) {
                 width: 175px;
                 height: 260px;
@@ -197,6 +201,9 @@ main {
             width: 290px;
             height: 470px;
 
+            &:hover {
+                transform: translateY(-0.5em);
+            }
 
 
             @media (max-width: $laptop) {
@@ -277,6 +284,10 @@ main {
             width: 290px;
             height: 370px;
 
+            &:hover {
+                transform: translateY(-0.5em);
+            }
+
             @media (max-width: $laptop) {
                 width: 195px;
                 height: 313px;
@@ -315,6 +326,16 @@ main {
                 justify-content: space-between;
                 align-items: center;
                 margin-top: 35px;
+                max-width: 280px;
+                max-height: 60px;
+                padding: 5px;
+                border-radius: 50px;
+
+                &:hover {
+                    // transform: translateY(-0.5em);
+                    background-color: $main-color;
+
+                }
 
                 @media(max-width: $laptop) {
                     margin-top: 20px;
@@ -326,6 +347,21 @@ main {
 
                     @media (max-width: $laptop) {
                         font-size: 16px;
+                    }
+                }
+
+                .arrow-btn {
+                    @include flex-center;
+                    width: 40px;
+                    height: 30px;
+
+                    &:active {
+                        transform: translateY(2px);
+                    }
+
+                    &:hover {
+                        background-color: #e50000;
+                        border-radius: 50px;
                     }
                 }
 
@@ -369,6 +405,10 @@ main {
         display: flex;
         flex-direction: column;
 
+        &:hover {
+            transform: translateY(-0.5em);
+        }
+
         .one-img {
             img {
                 width: 220px;
@@ -392,15 +432,6 @@ main {
         }
     }
 
-    // .card-image {
-    //     @media(max-width: $laptop) {
-    //         img {
-    //             width: 197px;
-    //             height: 200px;
-    //         }
-    //     }
-    // }
-
     .big-img {
         img {
             width: 290px;
@@ -422,7 +453,7 @@ main {
             }
         }
 
-        .text-wrap{
+        .text-wrap {
             max-width: 970px;
         }
     }
