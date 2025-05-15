@@ -5,8 +5,6 @@ body {
     background-color: $main-color;
     font-family: 'Manrope', sans-serif;
     color: $white;
-    display: flex;
-    flex-direction: column;
 }
 
 
@@ -20,6 +18,13 @@ header {
 
     .navbar {
         @include navbar;
+    }
+
+    .nav-menu {
+        visibility: hidden;
+        @media (max-width: $mobile) {
+            visibility: visible;
+        }
     }
 
     .image-block {

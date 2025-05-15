@@ -18,6 +18,7 @@ header .navbar {
   grid-auto-flow: column;
   justify-content: space-between;
   align-items: center;
+  padding: 24px 147px;
 }
 @media (max-width: 425px) {
   header .navbar {
@@ -51,6 +52,24 @@ header .navbar .logo {
     height: 11px;
   }
 }
+header .navbar .nav-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  right: 0;
+  background-color: #0f0f0f;
+  border: 4px solid #1a1a1a;
+  border-radius: 12px;
+  padding: 20px;
+  gap: 15px;
+  align-items: center;
+  z-index: 100;
+}
+header .navbar #menu-toggle:checked ~ .nav-menu {
+  display: flex;
+}
 header .navbar .lines {
   display: none;
 }
@@ -64,6 +83,9 @@ header .navbar .lines {
     background-color: #1a1a1a;
     border: 3px solid #262626;
     border-radius: 6px;
+  }
+  header .navbar .lines:active {
+    box-shadow: 0 0 1em 0em #d02525;
   }
 }
 header .navbar .nav-links {
@@ -97,6 +119,11 @@ header .navbar .nav-link {
 header .navbar .nav-link:hover {
   transform: scale(1.05);
 }
+@media (max-width: 425px) {
+  header .navbar .nav-link:hover {
+    background-color: #1f1f1f;
+  }
+}
 header .navbar .nav-link.active, header .navbar .nav-link:active {
   background-color: #1a1a1a;
   color: #ffffff;
@@ -121,6 +148,16 @@ header .navbar .btn-container1 .icon-btn1:hover {
     display: none;
   }
 }
+@media (max-width: 1440px) {
+  header .navbar {
+    padding: 24px 60px;
+  }
+}
+@media (max-width: 425px) {
+  header .navbar {
+    padding: 0;
+  }
+}
 
 main .section-header {
   display: flex;
@@ -132,7 +169,7 @@ main .section-header {
 }
 @media (max-width: 1440px) {
   main .section-header {
-    padding: 24px 66px;
+    padding: 24px 40px;
   }
 }
 @media (max-width: 425px) {
@@ -358,16 +395,35 @@ main .plans .btn-container3 .choose-btn {
   color: white;
   font-size: 16px;
 }
+@media (max-width: 1440px) {
+  main .plans .pricing-grid {
+    padding: 10px 40px 0 57px;
+  }
+  main .plans .pricing-card {
+    width: 365px;
+  }
+}
+@media (max-width: 425px) {
+  main .plans .pricing-grid {
+    padding: 10px;
+  }
+}
 main .table-wrap {
   display: flex;
   align-items: center;
   justify-content: center;
   max-width: 1920px;
-  width: 95%;
+  width: 84%;
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid #262626;
-  margin: 40px;
+  margin-left: 158px;
+}
+@media (max-width: 1440px) {
+  main .table-wrap {
+    width: 92%;
+    margin-left: 60px;
+  }
 }
 @media (max-width: 425px) {
   main .table-wrap {

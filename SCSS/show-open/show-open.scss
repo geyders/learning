@@ -14,6 +14,7 @@ header {
 
     .navbar {
         @include navbar;
+        padding: 24px 155px;
     }
 
     .top-section {

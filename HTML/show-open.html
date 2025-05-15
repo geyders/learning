@@ -12,7 +12,7 @@
 
 <body>
     <header>
-        <div class='navbar'>
+       <nav class='navbar'>
             <div class='logo'>
                 <div class='vector'>
                     <img class='vector-img' src='/img/Vector.svg'>
@@ -30,10 +30,21 @@
                 <button class="icon-btn1"><img src='/img/search.svg'></button>
                 <button class="icon-btn1"><img src='/img/bell.svg'></button>
             </div>
-            <div class="lines">
+            <input type="checkbox" id="menu-toggle" hidden>
+
+            <label for="menu-toggle" class="lines">
                 <img src="/img/lines.png" alt="lines">
-            </div>
-        </div>
+            </label>
+
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="movies-and-shows.html" class="nav-link">Movies & Shows</a>
+                <a href="movie-open.html" class="nav-link">Movies</a>
+                <a href="show-open.html" class="nav-link active">Shows</a>
+                <a href="support.html" class="nav-link">Support</a>
+                <a href="subscription.html" class="nav-link">Subscriptions</a>
+            </nav>
+        </nav>
 
         <!-- top section  -->
         <div class="top-section">

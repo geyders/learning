@@ -51,6 +51,25 @@ $laptop: 1440px;
         }
     }
 
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background-color: $bg-dark;
+        border: 4px solid $border-dark;
+        border-radius: 12px;
+        padding: 20px;
+        gap: 15px;
+        align-items: center;
+        z-index: 100;
+    }
+
+    #menu-toggle:checked~.nav-menu {
+        display: flex;
+    }
 
     .lines {
         display: none;
@@ -62,6 +81,11 @@ $laptop: 1440px;
             background-color: $border-dark;
             border: 3px solid #262626;
             border-radius: 6px;
+
+            &:active {
+                box-shadow: 0 0 1em 0em $btn-hover-color;
+            }
+
         }
     }
 
@@ -93,6 +117,10 @@ $laptop: 1440px;
 
         &:hover {
             transform: scale(1.05);
+
+            @media(max-width: $mobile) {
+                background-color: #1f1f1f;
+            }
         }
 
         &.active,
@@ -233,20 +261,6 @@ $laptop: 1440px;
         }
     }
 
-    // @media (max-width: $mobile) {
-    //     .category-grid {
-    //         gap: 10px;
-    //         padding: 0;
-    //         margin-bottom: 5px;
-    //     }
-
-    //     .category-grid .hidden {
-    //         display: none;
-    //     }
-    // }
-
-
-
     .category-card {
         @include card;
         width: 270px;
@@ -258,7 +272,7 @@ $laptop: 1440px;
 
         @media (max-width: $laptop) {
             width: 190px;
-            height: 240px;
+            height: 270px;
         }
 
         @media (max-width: $mobile) {
@@ -410,6 +424,11 @@ $laptop: 1440px;
         font-size: 18px;
         color: $white;
     }
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgba(229, 0, 0, 0.2);
+    }
 }
 
 
@@ -524,11 +543,12 @@ $laptop: 1440px;
 
 @mixin wrapper {
     max-width: 1920px;
-    width: 100%;
+    width: 84%;
     display: flex;
     flex-direction: row;
     gap: 40px;
     justify-content: center;
+    margin-left: 147px;
 
     @media (max-width: $laptop) {
         width: 90%;
@@ -539,6 +559,7 @@ $laptop: 1440px;
     @media (max-width: $mobile) {
         flex-direction: column;
         padding: 24px;
+        margin: 0;
     }
 
     .block-column {
@@ -588,7 +609,7 @@ $laptop: 1440px;
                 display: flex;
                 flex-direction: row;
                 gap: 25px;
-                max-width: 770px;
+               max-width: 920px;
 
                 @media (max-width: $laptop) {
                     gap: 15px;
@@ -599,8 +620,13 @@ $laptop: 1440px;
                 }
 
                 img {
-                    width: 87px;
+                    width: 95px;
                     height: 89px;
+
+                    &:hover {
+                        transform: scale(1.05);
+                        box-shadow: 0 0 20px rgba(229, 0, 0, 0.2);
+                    }
                 }
             }
         }
@@ -714,8 +740,13 @@ $laptop: 1440px;
     flex-direction: column;
     padding: 30px;
 
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgba(229, 0, 0, 0.2);
+    }
+
     @media (max-width: $mobile) {
-      width: 278px;
+        width: 278px;
     }
 
     .released {
@@ -829,7 +860,7 @@ $laptop: 1440px;
     max-width: 1596px;
 
     @media (max-width: $laptop) {
-        padding: 24px 66px;
+        padding: 24px 40px;
     }
 
     @media (max-width: $mobile) {
@@ -968,7 +999,7 @@ $laptop: 1440px;
     justify-items: center;
     max-height: 835px;
     overflow: hidden;
-    width: 100%;
+    width: 92%;
     max-width: 1920px;
     margin: 0 auto;
     padding: 0 80px;
@@ -1075,6 +1106,16 @@ $laptop: 1440px;
                     @include red-btn;
                     width: 310px;
                     height: 52px;
+
+                    &:hover {
+                        transform: translateY(-0.25em);
+                        box-shadow: 0 0 1em 0em $btn-hover-color;
+                        border-color: $btn-hover-color;
+                    }
+
+                    &:active {
+                        transform: translateY(2px);
+                    }
                 }
 
                 .mini-btn {
@@ -1086,6 +1127,11 @@ $laptop: 1440px;
                     border-radius: 8px;
                     cursor: pointer;
                     transition: background-color 0.2s ease;
+
+                    &:hover {
+                        transform: scale(1.05);
+                        box-shadow: 0 0 20px rgba(229, 0, 0, 0.2);
+                    }
                 }
             }
 

@@ -13,6 +13,15 @@ header {
 
     .navbar {
         @include navbar;
+        padding: 24px 147px;
+
+        @media (max-width: $laptop) {
+            padding: 24px 60px;
+        }
+
+        @media (max-width: $mobile){
+            padding: 0;
+        }
     }
 }
 
@@ -28,16 +37,40 @@ main {
 
     .plans {
         @include plans;
+
+
+        @media (max-width: $laptop) {
+            .pricing {
+                &-grid {
+                    padding: 10px 40px 0 57px;
+                }
+
+                &-card {
+                    width: 365px;
+                }
+            }
+        }
+
+        @media (max-width: $mobile) {
+            .pricing-grid {
+                padding: 10px;
+            }
+        }
     }
 
     .table-wrap {
         @include flex-center;
         max-width: 1920px;
-        width: 95%;
+        width: 84%;
         border-radius: 12px;
         overflow: hidden;
         border: 1px solid #262626;
-        margin: 40px;
+        margin-left: 158px;
+
+        @media (max-width: $laptop) {
+            width: 92%;
+            margin-left: 60px;
+        }
 
         @media (max-width: $mobile) {
             display: none;
