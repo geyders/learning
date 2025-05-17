@@ -267,7 +267,7 @@ main .section-header .btn-container .icon-btn:active {
 main .section-header .btn-container .icon-btn:hover {
   background-color: #e50000;
 }
-main .toggle-container {
+main .switch-container {
   display: flex;
   background-color: #0f0f0f;
   border-radius: 10px;
@@ -277,11 +277,11 @@ main .toggle-container {
   margin-left: auto;
 }
 @media (max-width: 425px) {
-  main .toggle-container {
+  main .switch-container {
     margin: 10px 0;
   }
 }
-main .toggle-container .toggle-btn {
+main .switch-container .switch-btn {
   width: 80px;
   height: 50px;
   border: none;
@@ -291,14 +291,18 @@ main .toggle-container .toggle-btn {
   background-color: #0f0f0f;
   color: #999999;
 }
-main .toggle-container .toggle-btn:hover {
+main .switch-container .switch-btn:hover {
   transform: scale(1.05);
 }
-main .toggle-container .toggle-btn.active {
+main .switch-container .switch-btn.active {
   background-color: #1f1f1f;
   color: white;
 }
-main .toggle-container .toggle-btn:active {
+main .switch-container .switch-btn.inactive {
+  background-color: #0f0f0f;
+  color: #999999;
+}
+main .switch-container .switch-btn:active {
   transform: translateY(2px);
 }
 main .plans .pricing-grid {
@@ -466,7 +470,7 @@ main .plan-container {
     flex-direction: column;
     gap: 10px;
   }
-  main .plan-container .toggle-container {
+  main .plan-container .switch-container {
     display: flex;
     background-color: #0f0f0f;
     border-radius: 10px;
@@ -480,12 +484,12 @@ main .plan-container {
   }
 }
 @media (max-width: 425px) and (max-width: 425px) {
-  main .plan-container .toggle-container {
+  main .plan-container .switch-container {
     margin: 10px 0;
   }
 }
 @media (max-width: 425px) {
-  main .plan-container .toggle-container .toggle-btn {
+  main .plan-container .switch-container .switch-btn {
     width: 80px;
     height: 50px;
     border: none;
@@ -495,17 +499,21 @@ main .plan-container {
     background-color: #0f0f0f;
     color: #999999;
   }
-  main .plan-container .toggle-container .toggle-btn:hover {
+  main .plan-container .switch-container .switch-btn:hover {
     transform: scale(1.05);
   }
-  main .plan-container .toggle-container .toggle-btn.active {
+  main .plan-container .switch-container .switch-btn.active {
     background-color: #1f1f1f;
     color: white;
   }
-  main .plan-container .toggle-container .toggle-btn:active {
+  main .plan-container .switch-container .switch-btn.inactive {
+    background-color: #0f0f0f;
+    color: #999999;
+  }
+  main .plan-container .switch-container .switch-btn:active {
     transform: translateY(2px);
   }
-  main .plan-container .toggle-container .plan {
+  main .plan-container .switch-container .plan {
     width: 114px;
   }
 }

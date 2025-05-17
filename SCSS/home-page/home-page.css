@@ -621,6 +621,7 @@ main .faq-item {
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 24px;
   border-radius: 12px;
   gap: 10px;
@@ -640,10 +641,6 @@ main .faq-item::after {
 main .faq-item:hover {
   transform: scale(1.05);
 }
-main .faq-active {
-  display: flex;
-  flex-direction: column;
-}
 main .faq-number {
   background-color: #1f1f1f;
   border: 1px solid #262626;
@@ -662,18 +659,41 @@ main .faq-question {
   font-size: 17px;
   margin: 0;
   flex-grow: 1;
+  width: 630px;
+}
+@media (max-width: 1440px) {
+  main .faq-question {
+    width: 520px;
+  }
+}
+@media (max-width: 425px) {
+  main .faq-question {
+    width: 220px;
+  }
 }
 main .faq-answer {
   font-size: 13px;
   color: #ffffff;
   margin-top: 10px;
+  display: none;
+}
+main .faq-answer.active {
+  display: block;
+}
+main .faq-answer.inactive {
+  display: none;
+}
+main .faq-btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 main .faq-icon {
   max-height: 20px;
   max-width: 20px;
   margin-left: auto;
 }
-main .toggle-container {
+main .switch-container {
   display: flex;
   background-color: #0f0f0f;
   border-radius: 10px;
@@ -683,11 +703,11 @@ main .toggle-container {
   margin-left: auto;
 }
 @media (max-width: 425px) {
-  main .toggle-container {
+  main .switch-container {
     margin: 10px 0;
   }
 }
-main .toggle-container .toggle-btn {
+main .switch-container .switch-btn {
   width: 80px;
   height: 50px;
   border: none;
@@ -697,14 +717,18 @@ main .toggle-container .toggle-btn {
   background-color: #0f0f0f;
   color: #999999;
 }
-main .toggle-container .toggle-btn:hover {
+main .switch-container .switch-btn:hover {
   transform: scale(1.05);
 }
-main .toggle-container .toggle-btn.active {
+main .switch-container .switch-btn.active {
   background-color: #1f1f1f;
   color: white;
 }
-main .toggle-container .toggle-btn:active {
+main .switch-container .switch-btn.inactive {
+  background-color: #0f0f0f;
+  color: #999999;
+}
+main .switch-container .switch-btn:active {
   transform: translateY(2px);
 }
 main .plans .pricing-grid {

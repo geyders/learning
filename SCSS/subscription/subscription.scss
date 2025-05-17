@@ -30,8 +30,8 @@ main {
         @include section-header;
     }
 
-    .toggle-container {
-        @include toggle-btn;
+    .switch-container {
+        @include switch-btn;
     }
 
 
@@ -119,8 +119,8 @@ main {
             flex-direction: column;
             gap: 10px;
 
-            .toggle-container {
-                @include toggle-btn;
+            .switch-container {
+                @include switch-btn;
                 width: 358px;
                 justify-content: space-between;
                 padding: 10px;

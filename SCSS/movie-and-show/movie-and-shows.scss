@@ -85,13 +85,35 @@ main {
             width: 390px;
 
             .toggle-container {
-                @include toggle-btn;
+                @include switch-btn;
+                width: 370px;
 
-                @media (max-width: $mobile) {
-                    width: 370px;
+                .toggle-btn {
+                    width: 191px;
+                    height: 50px;
+                    border: none;
+                    border-radius: 8px;
+                    cursor: pointer;
+                    font-size: 14px;
+                    background-color: $bg-dark;
+                    color: $text-color;
 
-                    .toggle-btn {
-                        width: 191px;
+                    &:hover {
+                        transform: scale(1.05);
+                    }
+
+                    &.active {
+                        background-color: #1f1f1f;
+                        color: white;
+                    }
+
+                    &.inactive {
+                        background-color: $bg-dark;
+                        color: $text-color;
+                    }
+
+                    &:active {
+                        transform: translateY(2px);
                     }
                 }
             }

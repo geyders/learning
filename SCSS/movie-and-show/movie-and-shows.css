@@ -373,6 +373,7 @@ main .movie-block {
     padding: 5px;
     width: 180px;
     margin-left: auto;
+    width: 370px;
   }
 }
 @media (max-width: 425px) and (max-width: 425px) {
@@ -381,8 +382,32 @@ main .movie-block {
   }
 }
 @media (max-width: 425px) {
-  main .movie-block .toggle-container .toggle-btn {
+  main .movie-block .toggle-container .switch-btn {
     width: 80px;
+    height: 50px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    background-color: #0f0f0f;
+    color: #999999;
+  }
+  main .movie-block .toggle-container .switch-btn:hover {
+    transform: scale(1.05);
+  }
+  main .movie-block .toggle-container .switch-btn.active {
+    background-color: #1f1f1f;
+    color: white;
+  }
+  main .movie-block .toggle-container .switch-btn.inactive {
+    background-color: #0f0f0f;
+    color: #999999;
+  }
+  main .movie-block .toggle-container .switch-btn:active {
+    transform: translateY(2px);
+  }
+  main .movie-block .toggle-container .toggle-btn {
+    width: 191px;
     height: 50px;
     border: none;
     border-radius: 8px;
@@ -398,16 +423,12 @@ main .movie-block {
     background-color: #1f1f1f;
     color: white;
   }
+  main .movie-block .toggle-container .toggle-btn.inactive {
+    background-color: #0f0f0f;
+    color: #999999;
+  }
   main .movie-block .toggle-container .toggle-btn:active {
     transform: translateY(2px);
-  }
-}
-@media (max-width: 425px) and (max-width: 425px) {
-  main .movie-block .toggle-container {
-    width: 370px;
-  }
-  main .movie-block .toggle-container .toggle-btn {
-    width: 191px;
   }
 }
 main .movie-block .movie-btn {
