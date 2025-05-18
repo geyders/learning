@@ -316,7 +316,7 @@ $laptop: 1440px;
             }
 
             @media (max-width: $mobile) {
-                padding: 30px 5px;
+                padding: 20px;
             }
         }
 
@@ -387,6 +387,22 @@ $laptop: 1440px;
             height: 63px;
             cursor: pointer;
             font-size: 14px;
+
+            &:hover {
+                box-shadow: 0 0 1em 0em $btn-hover-color;
+            }
+
+            &:active {
+                transform: translateY(2px);
+            }
+
+            @media (max-width: $laptop) {
+                width: 160px;
+            }
+
+            @media (max-width: $mobile) {
+                width: 130px;
+            }
         }
 
         .choose-btn {
@@ -399,6 +415,22 @@ $laptop: 1440px;
             gap: 12px;
             color: white;
             font-size: 16px;
+
+            &:hover {
+                box-shadow: 0 0 1em 0em $btn-hover-color;
+            }
+
+            &:active {
+                transform: translateY(2px);
+            }
+
+            @media (max-width: $laptop) {
+                width: 160px;
+            }
+
+            @media (max-width: $mobile) {
+                width: 130px;
+            }
         }
     }
 }
@@ -537,7 +569,7 @@ $laptop: 1440px;
         font-size: 13px;
         color: $white;
         margin-top: 10px;
-        display: none; // Початково приховано
+        display: none; 
 
         &.active {
             display: block;
@@ -571,9 +603,8 @@ $laptop: 1440px;
     margin-left: 147px;
 
     @media (max-width: $laptop) {
-        width: 90%;
+        width: 82%;
         justify-content: center;
-        padding-left: 70px;
     }
 
     @media (max-width: $mobile) {
@@ -699,9 +730,9 @@ $laptop: 1440px;
         background-color: #0f0f0f;
         border: 1px solid #262626;
         border-radius: 12px;
-        max-width: 377px;
-        max-height: 223px;
-        padding: 25px;
+        max-width: 395px;
+        max-height: 290px;
+        padding: 37px;
 
         .aniket {
             display: flex;
@@ -712,38 +743,45 @@ $laptop: 1440px;
             }
 
             p {
-                font-size: 16px;
-                color: $text-color;
                 margin: 0;
             }
+        }
+    }
 
-            .rate {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
+    .rate {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 20px;
+    }
 
-                .star-rate {
-                    @include flex-center;
-                    flex-direction: row;
-                    background-color: #141414;
-                    border-radius: 51px;
-                    border: 1px solid #262626;
-                    width: 120px;
-                    max-height: 29px;
-                    gap: 2px;
+    .star-rate {
+        @include flex-center;
+        flex-direction: row;
+        background-color: #141414;
+        border-radius: 51px;
+        border: 1px solid #262626;
+        width: 120px;
+        max-height: 29px;
+        gap: 2px;
 
-                    img {
-                        max-width: 74px;
-                        max-height: 14px;
-                    }
+        img {
+            max-width: 74px;
+            max-height: 14px;
+        }
 
-                    p {
-                        font-size: 14px;
-                        color: $text-color;
-                    }
-                }
-            }
+        p {
+            font-size: 14px;
+            color: $text-color;
+        }
+    }
+
+    .small-text {
+        p {
+            font-size: 16px;
+            color: $text-color;
+            margin: 0;
         }
     }
 }
@@ -1008,6 +1046,7 @@ $laptop: 1440px;
             background-color: $bg-dark;
             color: $text-color;
         }
+
         &:active {
             transform: translateY(2px);
         }
@@ -1197,6 +1236,7 @@ $laptop: 1440px;
             height: 344px;
             padding: 0;
             margin-bottom: 30px;
+            margin: 80px 0;
         }
     }
 
@@ -1243,6 +1283,10 @@ $laptop: 1440px;
             }
 
             .gallery-row {
+                display: flex;
+                gap: 20px;
+                padding: 20px;
+
                 @media (max-width: $mobile) {
                     display: grid;
                     grid-template-columns: repeat(3, 1fr);
@@ -1252,6 +1296,7 @@ $laptop: 1440px;
                     position: relative;
                 }
             }
+
         }
 
         &-img {
@@ -1325,6 +1370,7 @@ $laptop: 1440px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+                text-align: center;
             }
 
             p {

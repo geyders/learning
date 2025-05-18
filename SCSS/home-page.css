@@ -746,7 +746,7 @@ main .plans .pricing-grid {
 }
 @media (max-width: 425px) {
   main .plans .pricing-grid {
-    padding: 30px 5px;
+    padding: 20px;
   }
 }
 main .plans .pricing-card {
@@ -814,6 +814,22 @@ main .plans .btn-container3 .secondary-btn {
   cursor: pointer;
   font-size: 14px;
 }
+main .plans .btn-container3 .secondary-btn:hover {
+  box-shadow: 0 0 1em 0em #d02525;
+}
+main .plans .btn-container3 .secondary-btn:active {
+  transform: translateY(2px);
+}
+@media (max-width: 1440px) {
+  main .plans .btn-container3 .secondary-btn {
+    width: 160px;
+  }
+}
+@media (max-width: 425px) {
+  main .plans .btn-container3 .secondary-btn {
+    width: 130px;
+  }
+}
 main .plans .btn-container3 .choose-btn {
   background-color: #e50000;
   width: 196px;
@@ -824,6 +840,22 @@ main .plans .btn-container3 .choose-btn {
   gap: 12px;
   color: white;
   font-size: 16px;
+}
+main .plans .btn-container3 .choose-btn:hover {
+  box-shadow: 0 0 1em 0em #d02525;
+}
+main .plans .btn-container3 .choose-btn:active {
+  transform: translateY(2px);
+}
+@media (max-width: 1440px) {
+  main .plans .btn-container3 .choose-btn {
+    width: 160px;
+  }
+}
+@media (max-width: 425px) {
+  main .plans .btn-container3 .choose-btn {
+    width: 130px;
+  }
 }
 main .free-period .section-free {
   display: grid;
@@ -845,6 +877,7 @@ main .free-period .section-free {
     height: 344px;
     padding: 0;
     margin-bottom: 30px;
+    margin: 80px 0;
   }
 }
 main .free-period .free-block {
@@ -884,6 +917,11 @@ main .free-period .free-block::after {
   main .free-period .free-block::after {
     background: linear-gradient(to top, rgba(229, 0, 0, 0.5) 10%, rgb(30, 30, 30) 100%, rgb(5, 3, 3) 80%, transparent 100%);
   }
+}
+main .free-period .free-block .gallery-row {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
 }
 @media (max-width: 425px) {
   main .free-period .free-block .gallery-row {
@@ -978,6 +1016,7 @@ main .free-period .text-block {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
   }
 }
 main .free-period .text-block p {

@@ -1,4 +1,4 @@
-@use '../mixins/mixins' as *;
+@use '../mixins' as *;
 
 body {
     background-color: $main-color;
@@ -14,13 +14,24 @@ header {
 
     .navbar {
         @include navbar;
-          padding: 24px 155px;
+        padding: 24px 155px;
     }
 
     .top-section {
         @include top-section;
 
-        .top-block{
+        @media (max-width: $laptop) {
+            width: 1465px;
+        }
+
+       @media (max-width: $mobile) {
+        width: 390px;
+        height: 468px;
+        margin: 0 auto;
+        padding: 0 16px;
+    }
+
+        .top-block {
             margin-bottom: 200px;
 
             @media (max-width: $mobile) {
@@ -43,7 +54,7 @@ main {
 
     .right-block {
         @include right-block;
-        
+
     }
 
     .dev {

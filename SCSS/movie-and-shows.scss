@@ -1,4 +1,4 @@
-@use '../mixins/mixins' as *;
+@use '../mixins' as *;
 
 body {
     background-color: $main-color;
@@ -444,6 +444,42 @@ main {
     .show-block {
         @media (max-width: $mobile) {
             display: none;
+        }
+
+        @media(max-width: $mobile) {
+            .toggle-container {
+                @include switch-btn;
+                width: 370px;
+
+                .toggle-btn {
+                    width: 191px;
+                    height: 50px;
+                    border: none;
+                    border-radius: 8px;
+                    cursor: pointer;
+                    font-size: 14px;
+                    background-color: $bg-dark;
+                    color: $text-color;
+
+                    &:hover {
+                        transform: scale(1.05);
+                    }
+
+                    &.active {
+                        background-color: #1f1f1f;
+                        color: white;
+                    }
+
+                    &.inactive {
+                        background-color: $bg-dark;
+                        color: $text-color;
+                    }
+
+                    &:active {
+                        transform: translateY(2px);
+                    }
+                }
+            }
         }
     }
 

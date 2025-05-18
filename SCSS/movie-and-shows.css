@@ -971,6 +971,73 @@ main .movie-block .card-footer .text-release {
     display: none;
   }
 }
+@media (max-width: 425px) {
+  main .show-block .toggle-container {
+    display: flex;
+    background-color: #0f0f0f;
+    border-radius: 10px;
+    border: 1px solid #262626;
+    padding: 5px;
+    width: 180px;
+    margin-left: auto;
+    width: 370px;
+  }
+}
+@media (max-width: 425px) and (max-width: 425px) {
+  main .show-block .toggle-container {
+    margin: 10px 0;
+  }
+}
+@media (max-width: 425px) {
+  main .show-block .toggle-container .switch-btn {
+    width: 80px;
+    height: 50px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    background-color: #0f0f0f;
+    color: #999999;
+  }
+  main .show-block .toggle-container .switch-btn:hover {
+    transform: scale(1.05);
+  }
+  main .show-block .toggle-container .switch-btn.active {
+    background-color: #1f1f1f;
+    color: white;
+  }
+  main .show-block .toggle-container .switch-btn.inactive {
+    background-color: #0f0f0f;
+    color: #999999;
+  }
+  main .show-block .toggle-container .switch-btn:active {
+    transform: translateY(2px);
+  }
+  main .show-block .toggle-container .toggle-btn {
+    width: 191px;
+    height: 50px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    background-color: #0f0f0f;
+    color: #999999;
+  }
+  main .show-block .toggle-container .toggle-btn:hover {
+    transform: scale(1.05);
+  }
+  main .show-block .toggle-container .toggle-btn.active {
+    background-color: #1f1f1f;
+    color: white;
+  }
+  main .show-block .toggle-container .toggle-btn.inactive {
+    background-color: #0f0f0f;
+    color: #999999;
+  }
+  main .show-block .toggle-container .toggle-btn:active {
+    transform: translateY(2px);
+  }
+}
 main .trending-card {
   background-color: #1a1a1a;
   border-radius: 12px;
@@ -1040,6 +1107,7 @@ main .free-period .section-free {
     height: 344px;
     padding: 0;
     margin-bottom: 30px;
+    margin: 80px 0;
   }
 }
 main .free-period .free-block {
@@ -1079,6 +1147,11 @@ main .free-period .free-block::after {
   main .free-period .free-block::after {
     background: linear-gradient(to top, rgba(229, 0, 0, 0.5) 10%, rgb(30, 30, 30) 100%, rgb(5, 3, 3) 80%, transparent 100%);
   }
+}
+main .free-period .free-block .gallery-row {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
 }
 @media (max-width: 425px) {
   main .free-period .free-block .gallery-row {
@@ -1173,6 +1246,7 @@ main .free-period .text-block {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
   }
 }
 main .free-period .text-block p {

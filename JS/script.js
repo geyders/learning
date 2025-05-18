@@ -69,30 +69,62 @@ function toggle() {
     const toggleBtns = document.querySelectorAll('.toggle-btn');
     const movie = document.querySelector('.movie-block');
     const show = document.querySelector('.show-block');
+    const moviesBtn = document.querySelector('.movies-btn');
+    const showsBtn = document.querySelector('.shows-btn');
 
     toggleBtns.forEach(btn => {
+
         btn.addEventListener('click', () => {
-            toggleBtns.forEach(b => {
-                b.classList.remove('active');
-                b.classList.add('inactive');
-            });
 
             if (btn.textContent === 'Shows') {
                 movie.style.display = 'none';
                 show.style.display = 'block';
-                 btn.classList.add('active');
-                btn.classList.remove('inactive')
+                showsBtn.classList.add('active');
+                showsBtn.classList.remove('inactive');
+                moviesBtn.classList.remove('active');
+                moviesBtn.classList.add('inactive');
             } else if (btn.textContent === 'Movies') {
                 show.style.display = 'none';
                 movie.style.display = 'block';
-                btn.classList.add('active');
-                btn.classList.remove('inactive')
+                moviesBtn.classList.add('active');
+                moviesBtn.classList.remove('inactive');
+                showsBtn.classList.remove('active');
+                showsBtn.classList.add('inactive');
+            }
+        });
+    });
+};
 
+if (document.querySelector('.toggle-container')) {
+    toggle();
+};
+
+
+function planToggle() {
+    const switchBtns = document.querySelectorAll('.switch-btn');
+    const price = document.querySelector('.info-price');
+
+    switchBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            switchBtns.forEach(b => {
+                b.classList.remove('active');
+                b.classList.add('inactive');
+            });
+
+            btn.classList.add('active');
+            btn.classList.remove('inactive');
+
+            if (btn.textContent === 'Basic') {
+                price.textContent = '$9.99/year'
+            } else if (btn.textContent === "Standard") {
+                price.textContent = '$12.99/year'
+            } else {
+                price.textContent = '$14.99/year'
             }
         });
     });
 }
 
-if (document.querySelector('.toggle-container')) {
-    toggle();
+if (document.querySelector('.choose-container')) {
+    planToggle();
 }

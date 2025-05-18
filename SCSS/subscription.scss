@@ -1,4 +1,4 @@
-@use '../mixins/mixins' as *;
+@use '../mixins' as *;
 
 body {
     background-color: $main-color;
@@ -119,7 +119,7 @@ main {
             flex-direction: column;
             gap: 10px;
 
-            .switch-container {
+            .choose-container {
                 @include switch-btn;
                 width: 358px;
                 justify-content: space-between;

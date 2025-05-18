@@ -1,4 +1,4 @@
-@use '../mixins/mixins' as *;
+@use '../mixins' as *;
 
 
 body {
@@ -201,7 +201,7 @@ main {
 
         &-card {
             @include column;
-            position: relative; // добавлено для ::before
+            position: relative; 
             gap: 30px;
             width: 480px;
             height: 283px;

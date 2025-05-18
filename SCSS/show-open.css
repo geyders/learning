@@ -315,9 +315,8 @@ main .wrapper {
 }
 @media (max-width: 1440px) {
   main .wrapper {
-    width: 90%;
+    width: 82%;
     justify-content: center;
-    padding-left: 70px;
   }
 }
 @media (max-width: 425px) {
@@ -496,9 +495,9 @@ main .two-blocks .small-block {
   background-color: #0f0f0f;
   border: 1px solid #262626;
   border-radius: 12px;
-  max-width: 377px;
-  max-height: 223px;
-  padding: 25px;
+  max-width: 395px;
+  max-height: 290px;
+  padding: 37px;
 }
 main .two-blocks .small-block .aniket {
   display: flex;
@@ -508,17 +507,16 @@ main .two-blocks .small-block .aniket h3 {
   margin-bottom: 4px;
 }
 main .two-blocks .small-block .aniket p {
-  font-size: 16px;
-  color: #999999;
   margin: 0;
 }
-main .two-blocks .small-block .aniket .rate {
+main .two-blocks .rate {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 20px;
 }
-main .two-blocks .small-block .aniket .rate .star-rate {
+main .two-blocks .star-rate {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -530,13 +528,18 @@ main .two-blocks .small-block .aniket .rate .star-rate {
   max-height: 29px;
   gap: 2px;
 }
-main .two-blocks .small-block .aniket .rate .star-rate img {
+main .two-blocks .star-rate img {
   max-width: 74px;
   max-height: 14px;
 }
-main .two-blocks .small-block .aniket .rate .star-rate p {
+main .two-blocks .star-rate p {
   font-size: 14px;
   color: #999999;
+}
+main .two-blocks .small-text p {
+  font-size: 16px;
+  color: #999999;
+  margin: 0;
 }
 main .right-block {
   width: 100%;
@@ -913,6 +916,7 @@ main .free-period .section-free {
     height: 344px;
     padding: 0;
     margin-bottom: 30px;
+    margin: 80px 0;
   }
 }
 main .free-period .free-block {
@@ -952,6 +956,11 @@ main .free-period .free-block::after {
   main .free-period .free-block::after {
     background: linear-gradient(to top, rgba(229, 0, 0, 0.5) 10%, rgb(30, 30, 30) 100%, rgb(5, 3, 3) 80%, transparent 100%);
   }
+}
+main .free-period .free-block .gallery-row {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
 }
 @media (max-width: 425px) {
   main .free-period .free-block .gallery-row {
@@ -1046,6 +1055,7 @@ main .free-period .text-block {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
   }
 }
 main .free-period .text-block p {
